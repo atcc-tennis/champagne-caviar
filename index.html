@@ -145,7 +145,8 @@
   .cat .base{display:block;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:4px}
   .cat .lvl{margin-left:auto;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-dim);white-space:nowrap;padding-top:3px}
   .cat.m{border-color:var(--gold);background:rgba(201,164,76,.06)}
-  .cat.taken{opacity:.66}
+  .cat.taken{opacity:1;border-color:var(--gold);background:linear-gradient(180deg,rgba(214,176,92,.18),rgba(214,176,92,.05))}
+  .cat.taken .claimed{background:var(--gold);color:#221a06;border-color:var(--gold);font-weight:600}
   .cat .hostedby{display:block;font-size:12px;color:var(--gold-soft);margin-top:5px;letter-spacing:.02em;text-transform:none;font-family:'Jost',sans-serif;font-weight:400}
   .cat .claimed{margin-left:auto;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);border-radius:20px;padding:3px 10px;white-space:nowrap;align-self:flex-start}
   .hb-list{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:920px;margin:0 auto}
@@ -208,14 +209,14 @@
     <div class="eyebrow">A benefit for the Altadena Town &amp; Country Club</div>
     <h1>Champagne<span class="amp">&amp;</span>Caviar</h1>
     <p class="sub">Champagne, caviar, and a little mischief — to put recording cameras on our courts.</p>
-    <p class="urgent">Tickets are limited and this event will sell out — reserve yours now.</p>
+    <p class="urgent">Seats are limited and this night will sell out — get on the list now.</p>
     <div class="meta">
       <div><span class="k">When</span> Saturday, September 19 · 6:30 PM</div>
       <div><span class="k">Where</span> Home of Melinda &amp; Matt Nix</div>
       <div><span class="k">Attire</span> Black Tie Optional</div>
     </div>
     <div class="cta-row">
-      <a href="#rsvp" class="btn btn-gold">Reserve Your Tickets</a>
+      <a href="#rsvp" class="btn btn-gold">Count Me In</a>
       <a href="#host" class="btn btn-ghost">Become a Host</a>
     </div>
   </div>
@@ -264,6 +265,7 @@
       <div class="cause-card">
         <h3>Why it matters</h3>
         <p>The best players in the world study the tape. With cameras on our courts, every ATCC member gets that same advantage — see your game the way your pro sees it, and watch your progress point by point. Your ticket and your hosting turn a great party into a permanent home-court upgrade.</p>
+        <p style="margin-top:16px"><a href="the-vision.html" style="color:var(--gold-soft);text-decoration:underline;font-weight:500">Read the full vision →</a></p>
       </div>
     </div>
   </div>
@@ -280,7 +282,7 @@
       <div class="price">$250<small> / guest</small></div>
       <p class="incl">Admission, champagne &amp; caviar all evening, full food &amp; lounge access, and entry to the live auction.</p>
       <p style="color:var(--gold-soft);font-weight:500;font-size:14px;margin:0 0 24px">Limited tickets — this event will sell out. Grab yours early.</p>
-      <a href="#rsvp" class="btn btn-gold">Reserve Tickets</a>
+      <a href="#rsvp" class="btn btn-gold">Count Me In</a>
     </div>
   </div>
 </section>
@@ -327,12 +329,12 @@
     <div class="cat-group">
       <div class="group-label"><span class="amt">$2,500</span><span class="lab">Marquee Hosts</span></div>
       <div class="cats">
-        <div class="cat m taken"><div><div class="nm">Serve &amp; Sparkle</div><span class="base">Champagne</span><span class="hostedby">Hosted by The Bickerstaffes &amp; The Kopoushians</span></div><span class="claimed">Claimed</span></div>
         <div class="cat m"><div><div class="nm">Top Shelf</div><span class="base">The Bar</span></div></div>
-        <div class="cat m taken"><div><div class="nm">Caviar Court</div><span class="base">Caviar</span><span class="hostedby">Hosted by Joan Nguyen &amp; Brandon Tran</span></div><span class="claimed">Claimed</span></div>
-        <div class="cat m taken"><div><div class="nm">Ice Ice Baby</div><span class="base">Ice Luge</span><span class="hostedby">Hosted by Noel &amp; Sky Minor</span></div><span class="claimed">Claimed</span></div>
         <div class="cat m"><div><div class="nm">Strike a Pose</div><span class="base">Décor &amp; Photobooth</span></div></div>
         <div class="cat m"><div><div class="nm">The Munchie Lounge</div><span class="base">Munchies &amp; late-night snacks</span></div></div>
+        <div class="cat m taken"><div><div class="nm">Serve &amp; Sparkle</div><span class="base">Champagne</span><span class="hostedby">Hosted by The Bickerstaffes &amp; The Kopoushians</span></div><span class="claimed">Claimed</span></div>
+        <div class="cat m taken"><div><div class="nm">Caviar Court</div><span class="base">Caviar</span><span class="hostedby">Hosted by Joan Nguyen &amp; Brandon Tran</span></div><span class="claimed">Claimed</span></div>
+        <div class="cat m taken"><div><div class="nm">Ice Ice Baby</div><span class="base">Ice Luge</span><span class="hostedby">Hosted by Noel &amp; Sky Minor</span></div><span class="claimed">Claimed</span></div>
       </div>
     </div>
 
@@ -344,16 +346,16 @@
         <div class="cat"><div><div class="nm">Havana Nights</div><span class="base">Cigars</span></div></div>
         <div class="cat"><div><div class="nm">Neat Freaks</div><span class="base">Scotch</span></div></div>
         <div class="cat"><div><div class="nm">Shot Callers</div><span class="base">Shots</span></div></div>
-        <div class="cat taken"><div><div class="nm">Cheese &amp; Thank You</div><span class="base">Grazing Table · savory</span><span class="hostedby">Hosted by Jenn &amp; Richard Wilkinson</span></div><span class="claimed">Claimed</span></div>
         <div class="cat"><div><div class="nm">Sweet Spot</div><span class="base">Dessert Table</span></div></div>
         <div class="cat"><div><div class="nm">Slice Slice Baby</div><span class="base">Pizza</span></div></div>
         <div class="cat"><div><div class="nm">Pasta La Vista</div><span class="base">Pasta</span></div></div>
         <div class="cat"><div><div class="nm">Line Judges</div><span class="base">Event Support</span></div></div>
         <div class="cat"><div><div class="nm">Ground Crew</div><span class="base">Event Support</span></div></div>
         <div class="cat"><div><div class="nm">G.O.A.T.</div><span class="base">Pros &amp; Staff</span></div></div>
+        <div class="cat taken"><div><div class="nm">Cheese &amp; Thank You</div><span class="base">Grazing Table · savory</span><span class="hostedby">Hosted by Jenn &amp; Richard Wilkinson</span></div><span class="claimed">Claimed</span></div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:16px"><a href="#rsvp" class="btn btn-gold">Claim a Host Spot</a></div>
+    <div style="text-align:center;margin-top:16px"><a href="#rsvp" class="btn btn-gold">Count Me In</a></div>
   </div>
 </section>
 
@@ -367,7 +369,7 @@
       <div class="rule"></div>
     </div>
     <div class="auc-grid">
-      <div class="auc"><span class="ico">🌴</span><h4>Escape in Style</h4><p>Vacation stays at exclusive, hard-to-book destinations.</p></div>
+      <div class="auc"><span class="ico">🌴🎿</span><h4>Escape in Style</h4><p>Vacation stays at exclusive, hard-to-book destinations.</p></div>
       <div class="auc"><span class="ico">🎾</span><h4>Private Live-Ball Parties</h4><p>Book the pros for your own courtside bash with friends.</p></div>
       <div class="auc"><span class="ico">🏟️</span><h4>Best Seats in the House</h4><p>Tickets to marquee sporting events you won't want to miss.</p></div>
     </div>
@@ -382,65 +384,59 @@
 <section class="rsvp" id="rsvp">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">RSVP &amp; checkout</div>
-      <h2>Save your seat</h2>
-      <p>Reserve tickets, claim a host spot, or both. We'll see you on the 19th.</p>
+      <div class="eyebrow">Count me in</div>
+      <h2>I'm IN!</h2>
+      <p>Ticketing opens shortly — but seats are limited and this night will sell out. Tell us you're coming, and we'll send you the link to grab your tickets (and claim a host spot) the moment it's live.</p>
       <div class="rule"></div>
     </div>
-    <form onsubmit="checkout(event)">
+    <form id="rsvpForm" onsubmit="imIn(event)">
       <div class="two">
-        <div class="field"><label>First name</label><input type="text" required></div>
-        <div class="field"><label>Last name</label><input type="text" required></div>
+        <div class="field"><label>First name</label><input id="f_first" type="text" required></div>
+        <div class="field"><label>Last name</label><input id="f_last" type="text" required></div>
       </div>
       <div class="two">
-        <div class="field"><label>Email</label><input type="email" required></div>
-        <div class="field"><label>Mobile</label><input type="tel"></div>
+        <div class="field"><label>Email</label><input id="f_email" type="email" required></div>
+        <div class="field"><label>Mobile</label><input id="f_mobile" type="tel"></div>
       </div>
       <div class="two">
         <div class="field">
-          <label>Tickets ($250 each)</label>
-          <select id="tix" onchange="calc()">
-            <option value="0">0</option><option value="1">1</option><option value="2" selected>2</option>
-            <option value="3">3</option><option value="4">4</option><option value="6">6</option>
-            <option value="8">8</option><option value="10">10</option>
+          <label>How many in your party?</label>
+          <select id="f_party">
+            <option>1</option><option selected>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>8</option><option>10</option><option>Not sure yet</option>
           </select>
         </div>
         <div class="field">
-          <label>Host a category (optional)</label>
-          <select id="host" onchange="calc()">
-            <option value="0">No, tickets only</option>
-            <optgroup label="Marquee Host — $2,500 (incl. 4 tickets)">
-              <option value="2500">Top Shelf · The Bar</option>
-              <option value="2500">Strike a Pose · Décor &amp; Photobooth</option>
-              <option value="2500">The Munchie Lounge · Munchies &amp; late-night snacks</option>
-              <option disabled>Serve &amp; Sparkle · Champagne — SOLD OUT</option>
-              <option disabled>Caviar Court · Caviar — SOLD OUT</option>
-              <option disabled>Ice Ice Baby · Ice Luge — SOLD OUT</option>
-            </optgroup>
-            <optgroup label="Host — $1,000 (incl. 2 tickets)">
-              <option value="1000">Aces of Bass · DJ</option>
-              <option value="1000">Spin Doctors · DJ</option>
-              <option value="1000">Havana Nights · Cigars</option>
-              <option value="1000">Neat Freaks · Scotch</option>
-              <option value="1000">Shot Callers · Shots</option>
-              <option disabled>Cheese &amp; Thank You · Grazing Table (savory) — SOLD OUT</option>
-              <option value="1000">Sweet Spot · Dessert Table</option>
-              <option value="1000">Slice Slice Baby · Pizza</option>
-              <option value="1000">Pasta La Vista · Pasta</option>
-              <option value="1000">Line Judges · Event Support</option>
-              <option value="1000">Ground Crew · Event Support</option>
-              <option value="1000">G.O.A.T. · Pros &amp; Staff</option>
-            </optgroup>
+          <label>Interested in hosting a category?</label>
+          <select id="f_host">
+            <option value="No, just attending">No, just attending</option>
+            <option value="Maybe — tell me more">Maybe — tell me more</option>
+            <option value="Yes — Host ($1,000)">Yes — Host ($1,000)</option>
+            <option value="Yes — Marquee Host ($2,500)">Yes — Marquee Host ($2,500)</option>
           </select>
         </div>
       </div>
-      <div class="total-line">
-        <span class="lbl">Your total</span>
-        <span class="amt" id="total">$500</span>
-      </div>
-      <div style="text-align:center;margin-top:26px"><button class="btn btn-gold" type="submit" style="width:100%">Complete My RSVP</button></div>
-      <p class="note">Champagne &amp; Caviar benefits the Altadena Town &amp; Country Club court-camera initiative. Contributions are not tax-deductible.</p>
+      <div class="field" style="margin-top:4px"><label>Anything you'd like us to know? (optional)</label><input id="f_note" type="text"></div>
+      <div style="text-align:center;margin-top:26px"><button class="btn btn-gold" type="submit" style="width:100%">I'm IN! 🥂</button></div>
+      <p class="note">No payment now — we'll email you the ticket &amp; host-payment link the moment it opens. Champagne &amp; Caviar benefits the ATCC court-camera fund; contributions are not tax-deductible.</p>
     </form>
+  </div>
+</section>
+
+<!-- ADDITIONAL CONTRIBUTION — staged. To activate: (1) paste your Stripe custom-amount
+     ("customer chooses price") payment link into DONATE_LINK in the script below, and
+     (2) remove style="display:none" from this section. -->
+<section id="give" style="display:none;padding:72px 0;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Give a little more</div>
+      <h2>Fund the Courts</h2>
+      <p>Beyond your ticket, every extra dollar goes straight to bringing PlaySight SmartCourt cameras to ATCC. Chip in any amount — every bit counts.</p>
+      <div class="rule"></div>
+    </div>
+    <div style="text-align:center;color:var(--cream-dim);margin:6px 0 22px;font-size:16px">Suggested: $100 · $250 · $500 · or any amount you choose</div>
+    <div style="text-align:center"><a href="#" class="btn btn-gold" onclick="donate();return false;">Give to the Cause →</a></div>
+    <p style="text-align:center;margin-top:20px;color:var(--cream-dim);font-size:13px;opacity:.75">Contributions benefit the ATCC court-camera fund and are not tax-deductible.</p>
   </div>
 </section>
 
@@ -453,36 +449,38 @@
 </footer>
 
 <script>
-  /* ================= STRIPE PAYMENT LINKS =================
-     Paste your three Stripe Payment Link URLs below. Create them in the Stripe
-     Dashboard → Payment Links (one per price). For the ticket link, turn ON
-     "Let customers adjust quantity" so guests can buy more than one.
-     Until these are filled in, the button shows a friendly setup reminder.        */
-  var STRIPE = {
-    ticket:   "https://buy.stripe.com/4gMaEX2sw47M55a7Mx9b000",   // $250 — general admission ticket
-    host1000: "https://buy.stripe.com/00wbJ10kocEidBG0k59b001",   // $1,000 — Host
-    host2500: "https://buy.stripe.com/eVqfZh7MQawafJ0aYJ9b002"    // $2,500 — Marquee Host
-  };
-  /* ======================================================== */
-
-  function calc(){
-    var t = parseInt(document.getElementById('tix').value)||0;
-    var h = parseInt(document.getElementById('host').value)||0;
-    var total = t*250 + h;
-    document.getElementById('total').textContent = '$'+total.toLocaleString();
-  }
-
-  function checkout(e){
+  function imIn(e){
     e.preventDefault();
-    var h = parseInt(document.getElementById('host').value)||0;
-    var url = (h === 2500) ? STRIPE.host2500 : (h === 1000) ? STRIPE.host1000 : STRIPE.ticket;
-    if(!url || url.indexOf('REPLACE') > -1){
-      alert("Almost there — Stripe isn't connected yet.\n\nPaste your three Stripe Payment Link URLs into the STRIPE block near the bottom of this file, and this button will send guests to secure Stripe checkout.");
-      return;
-    }
-    window.location.href = url;
+    var g = function(id){ return (document.getElementById(id).value || '').trim(); };
+    var first = g('f_first'), last = g('f_last'), email = g('f_email'), mobile = g('f_mobile'), note = g('f_note');
+    var party = document.getElementById('f_party').value;
+    var host  = document.getElementById('f_host').value;
+    var subject = "I'm IN! — Champagne & Caviar RSVP (" + first + " " + last + ")";
+    var body =
+      "Count me in for Champagne & Caviar!\n\n" +
+      "Name: " + first + " " + last + "\n" +
+      "Email: " + email + "\n" +
+      "Mobile: " + mobile + "\n" +
+      "Party size: " + party + "\n" +
+      "Hosting interest: " + host + "\n" +
+      "Note: " + note + "\n";
+    window.location.href = "mailto:noel.atcc@gmail.com,melindastahl@sbcglobal.net?subject=" +
+      encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    document.getElementById('rsvpForm').innerHTML =
+      '<div style="text-align:center;padding:26px 0">' +
+      '<div style="font-size:44px;margin-bottom:6px">🥂</div>' +
+      '<h3 style="color:var(--cream);font-size:27px;margin:0 0 12px">You\'re on the list!</h3>' +
+      '<p style="color:var(--cream-dim);max-width:470px;margin:0 auto;line-height:1.6">Your email is opening now — just hit send to lock in your RSVP. We\'ll follow up with ticket details soon. See you on the 19th!</p>' +
+      '</div>';
   }
-  calc();
+
+  /* ===== ADDITIONAL CONTRIBUTION — paste your Stripe custom-amount payment link
+     ("customer chooses what to pay") below, then reveal the #give section. ===== */
+  var DONATE_LINK = "";
+  function donate(){
+    if(!DONATE_LINK){ alert("Donations open soon — thank you for wanting to give more!"); return; }
+    window.location.href = DONATE_LINK;
+  }
 </script>
 </body>
 </html>
