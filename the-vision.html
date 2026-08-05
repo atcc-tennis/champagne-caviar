@@ -27,18 +27,23 @@
   .head{text-align:center;padding:44px 0 26px}
   .flute{font-size:34px}
   .script{font-family:'Great Vibes',cursive;font-weight:400;color:var(--cream);font-size:clamp(50px,9vw,92px);line-height:.95;margin:8px 0 4px}
-  .lede{font-size:19.5px;color:var(--cream-dim);max-width:660px;margin:22px auto 0;line-height:1.7}
+  .lede{font-size:19.5px;color:var(--cream-dim);max-width:680px;margin:22px auto 0;line-height:1.7}
   .lede a{color:var(--gold-soft);text-decoration:underline}
   .rule{width:70px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:32px auto}
   h2.sec{font-size:clamp(26px,4vw,34px);text-align:center;margin:26px 0 8px;color:var(--cream)}
-  .sub{text-align:center;color:var(--cream-dim);max-width:660px;margin:0 auto 14px;line-height:1.7}
-  .reasons{display:grid;gap:16px;margin:30px 0 8px}
-  .reason{border:1px solid var(--line);border-radius:10px;padding:22px 26px;background:rgba(214,176,92,.05)}
-  .reason h3{color:var(--gold-soft);font-size:20px;margin-bottom:7px}
-  .reason p{color:var(--cream-dim);font-size:16.5px;line-height:1.66}
-  .cta{text-align:center;padding:40px 0 22px}
+  .sub{text-align:center;color:var(--cream-dim);max-width:700px;margin:0 auto 16px;line-height:1.72}
+  .stat{text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:20px;color:var(--gold-soft);margin:18px auto 6px}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:18px auto 0;max-width:660px}
+  .chip{border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:13.5px;color:var(--cream-dim);background:rgba(214,176,92,.05);white-space:nowrap}
+  .reasons{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:30px 0 8px}
+  .reason{border:1px solid var(--line);border-radius:10px;padding:20px 24px;background:rgba(214,176,92,.05)}
+  .reason h3{color:var(--gold-soft);font-size:19px;margin-bottom:6px}
+  .reason p{color:var(--cream-dim);font-size:16px;line-height:1.6}
+  .section-gap{padding:24px 0 0}
+  .cta{text-align:center;padding:44px 0 22px}
   .cta .sm{margin-top:16px}
   .foot{text-align:center;color:var(--cream-dim);opacity:.7;font-size:13px;padding:6px 0 46px;letter-spacing:.02em}
+  @media(max-width:640px){.reasons{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -49,20 +54,37 @@
   <div class="flute">🥂</div>
   <div class="eyebrow">Champagne &amp; Caviar · The Vision</div>
   <div class="script">Every point,<br>on the record.</div>
-  <p class="lede">Installing <a href="https://playsight.com/our-sports/tennis/" target="_blank" rel="noopener">PlaySight SmartCourt</a> cameras on our courts is an investment in player development — giving every ATCC member a training tool that has long been standard for high-level athletes. By bringing this technology to the club, we create more opportunities to learn, improve, and enjoy the game.</p>
+  <p class="lede">Installing <a href="https://playsight.com/our-sports/tennis/" target="_blank" rel="noopener">PlaySight</a> cameras on our courts is an investment in our tennis program and player development. The cameras and AI analytics give every member — at any level — the free option to use this technology to learn, improve, and enjoy the game, and to review their tennis with their coaches.</p>
   <div class="rule"></div>
 </div>
 
 <section>
   <div class="wrap">
-    <h2 class="sec">Why Court Cameras Matter</h2>
-    <p class="sub">Tennis players at every level — from juniors to professionals — use video analysis to improve. Watching yourself play provides insights that are nearly impossible to recognize in the moment.</p>
+    <h2 class="sec">Who is PlaySight?</h2>
+    <p class="sub">Founded in 2010, PlaySight was developed specifically for tennis and other racquet sports. It is used by more than 100 NCAA Division I collegiate tennis programs, as well as the USTA National Campus, IMG Academy, and premier private clubs such as the La Jolla Beach and Tennis Club.</p>
+    <div class="stat">Trusted by 100+ NCAA Division I programs</div>
+    <div class="chips">
+      <span class="chip">USC</span>
+      <span class="chip">UCLA</span>
+      <span class="chip">Stanford</span>
+      <span class="chip">Ohio State</span>
+      <span class="chip">USTA National Campus</span>
+      <span class="chip">IMG Academy</span>
+      <span class="chip">La Jolla Beach &amp; Tennis Club</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-gap">
+  <div class="wrap">
+    <h2 class="sec">Why use PlaySight?</h2>
+    <p class="sub">PlaySight is designed to enhance the tennis experience for members of every age and skill level — whether taking lessons, participating in clinics, playing social doubles, representing the club in USTA league competition, or competing in tournaments.</p>
+    <p class="sub">Lessons, practice sessions and matches can be selected for recording, letting players review stroke mechanics, strategy, shot selection and court positioning after play. Coaches can review video with players, create teaching clips, and provide more objective instruction — while USTA teams can use match footage to evaluate doubles positioning, prepare for upcoming opponents, and review match strategy. Players have secure access to their recordings through the PlaySight app.</p>
     <div class="reasons">
-      <div class="reason"><h3>See what is really happening</h3><p>Many of us think we know what we're doing on court, but video often tells a different story. It reveals movement, court positioning, shot selection, footwork, recovery, and patterns that are easy to miss while playing.</p></div>
-      <div class="reason"><h3>Learn faster</h3><p>Whether you're working on a stronger serve, better net play, or improving doubles strategy, reviewing video helps reinforce good habits and identify opportunities for improvement. A few minutes of review can make the next lesson or practice much more productive.</p></div>
-      <div class="reason"><h3>Get more value from coaching</h3><p>Pros can review clips with players after matches or clinics to provide specific, personalized feedback. Instead of relying on memory, players and coaches can see exactly what happened and discuss how to improve.</p></div>
-      <div class="reason"><h3>Continue improving off the court</h3><p>Members often talk about putting in work away from the court. Video review is one of the most effective ways to do that — you can learn from your own matches anytime, not just during a lesson.</p></div>
-      <div class="reason"><h3>Support every level of player</h3><p>Court cameras benefit juniors developing fundamentals, league players preparing for competition, and recreational players who simply want to improve and have more fun.</p></div>
+      <div class="reason"><h3>AI-generated highlights</h3><p>Automatic highlight reels pulled from your sessions and matches.</p></div>
+      <div class="reason"><h3>Live streaming</h3><p>Stream matches and tournaments for family, friends, and fans.</p></div>
+      <div class="reason"><h3>Automated player recognition</h3><p>The system identifies who's on court, so footage finds the right player.</p></div>
+      <div class="reason"><h3>Private &amp; secure</h3><p>Robust administrative controls keep recordings accessible only to authorized users.</p></div>
     </div>
   </div>
 </section>
