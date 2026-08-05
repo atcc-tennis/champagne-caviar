@@ -386,7 +386,7 @@
     <div class="section-head">
       <div class="eyebrow">Count me in</div>
       <h2>I'm IN!</h2>
-      <p>Ticketing opens shortly — but seats are limited and this night will sell out. Tell us you're coming, and we'll send you the link to grab your tickets (and claim a host spot) the moment it's live.</p>
+      <p>Ticketing opens shortly — spots are limited and this night will sell out. Tell us you're coming, and we'll send you the link to grab your tickets (and claim a host spot) the moment it's live.</p>
       <div class="rule"></div>
     </div>
     <form id="rsvpForm" onsubmit="imIn(event)">
@@ -452,25 +452,21 @@
   function imIn(e){
     e.preventDefault();
     var g = function(id){ return (document.getElementById(id).value || '').trim(); };
-    var first = g('f_first'), last = g('f_last'), email = g('f_email'), mobile = g('f_mobile'), note = g('f_note');
-    var party = document.getElementById('f_party').value;
-    var host  = document.getElementById('f_host').value;
-    var subject = "I'm IN! — Champagne & Caviar RSVP (" + first + " " + last + ")";
-    var body =
-      "Count me in for Champagne & Caviar!\n\n" +
-      "Name: " + first + " " + last + "\n" +
-      "Email: " + email + "\n" +
-      "Mobile: " + mobile + "\n" +
-      "Party size: " + party + "\n" +
-      "Hosting interest: " + host + "\n" +
-      "Note: " + note + "\n";
-    window.location.href = "mailto:noel.atcc@gmail.com,melindastahl@sbcglobal.net?subject=" +
-      encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    var params = new URLSearchParams({
+      first: g('f_first'), last: g('f_last'), email: g('f_email'),
+      mobile: g('f_mobile'), party: document.getElementById('f_party').value,
+      host: document.getElementById('f_host').value, note: g('f_note')
+    });
+    fetch("https://script.google.com/macros/s/AKfycbzeChf_cnhZDC5pKA0Vp8MfeRhTMIL4RaLYgjW4BytDvqLpCw92j8AuMSSgr9X4PSYjdg/exec", {
+      method: "POST", mode: "no-cors",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: params.toString()
+    });
     document.getElementById('rsvpForm').innerHTML =
       '<div style="text-align:center;padding:26px 0">' +
       '<div style="font-size:44px;margin-bottom:6px">🥂</div>' +
       '<h3 style="color:var(--cream);font-size:27px;margin:0 0 12px">You\'re on the list!</h3>' +
-      '<p style="color:var(--cream-dim);max-width:470px;margin:0 auto;line-height:1.6">Your email is opening now — just hit send to lock in your RSVP. We\'ll follow up with ticket details soon. See you on the 19th!</p>' +
+      '<p style="color:var(--cream-dim);max-width:490px;margin:0 auto;line-height:1.6">You\'re counted in. When tickets go on sale, we\'ll invite you right back here to grab yours and process payment. See you on the 19th!</p>' +
       '</div>';
   }
 
