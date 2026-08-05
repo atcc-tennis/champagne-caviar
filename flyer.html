@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#211c16; --ink2:#2e281f; --gold:#d6b05c; --gold-soft:#f0dca2;
+    --cream:#f8f2e6; --cream-dim:#ded6c4; --blush:#e0a184; --line:rgba(214,176,92,.32);
+  }
+  @page { size: 8.5in 11in; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 8.5in; height: 11in;
+    background: linear-gradient(180deg,#2a231b 0%, #1e1912 55%, #262018 100%);
+    color: var(--cream);
+    font-family: 'Jost', sans-serif; font-weight: 300; position: relative;
+  }
+  .hero-glow { position: absolute; inset: 0;
+    background:
+      radial-gradient(100% 45% at 50% 0%, rgba(224,161,132,.18), transparent 55%),
+      radial-gradient(130% 60% at 50% 4%, rgba(214,176,92,.22), transparent 62%);
+  }
+  .frame { position: absolute; top: 0.3in; left: 0.3in; right: 0.3in; bottom: 0.3in; border: 1px solid var(--line); }
+  .content { position: relative; height: 100%; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center; padding: 0.35in 0.6in; }
+  .flute { display: block; margin: 0 auto 14px; }
+  .eyebrow { font-family: 'Jost', sans-serif; font-weight: 500; text-transform: uppercase;
+    letter-spacing: .42em; font-size: 11px; color: var(--gold); margin-bottom: 6px; }
+  h1 { font-family: 'Great Vibes', cursive; font-weight: 400; font-size: 118px; line-height: 0.86;
+    color: var(--cream); margin: 6px 0 0; }
+  .amp { display: block; font-size: 62px; color: var(--gold-soft); margin: -14px 0 -12px 0; }
+  .sub { font-size: 15px; color: var(--cream); max-width: 5.3in; margin: 18px auto 0;
+    font-weight: 300; line-height: 1.5; }
+  .urgent { color: var(--gold-soft); font-weight: 500; letter-spacing: .03em; font-size: 13px; margin: 9px auto 0; }
+  .meta { display: flex; flex-wrap: nowrap; justify-content: center; gap: 8px 34px;
+    margin: 22px 0 18px; font-size: 14px; color: var(--cream); }
+  .meta div { display: flex; flex-direction: column; align-items: center; gap: 4px; white-space: nowrap; }
+  .meta .k { color: var(--gold); font-weight: 500; letter-spacing: .18em; text-transform: uppercase; font-size: 10px; }
+  .rule { width: 64px; height: 2px; background: linear-gradient(90deg, var(--blush), var(--gold)); margin: 4px auto 16px; }
+  .ticket-card { background: linear-gradient(180deg,#2c251b,#1f1913); border: 1px solid var(--gold);
+    border-radius: 8px; padding: 18px 40px; margin-bottom: 18px; }
+  .ticket-card .price { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 36px; color: var(--gold-soft); }
+  .ticket-card .price small { font-size: 14px; color: var(--cream-dim); font-weight: 300; font-family: 'Jost', sans-serif; }
+  .ticket-card .incl { color: var(--cream-dim); margin: 6px 0 0; font-size: 12px; max-width: 4.6in; line-height: 1.45; }
+  .cause { font-size: 12.5px; line-height: 1.5; color: var(--cream-dim); max-width: 6in; margin-bottom: 18px; }
+  .cause b { color: var(--cream); font-weight: 500; }
+  .btn-gold { display: inline-block; background: linear-gradient(180deg, var(--gold-soft), var(--gold));
+    color: #221a06; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: .16em;
+    text-transform: uppercase; font-size: 13px; padding: 12px 34px; border-radius: 2px; }
+  .rsvp-sub { font-size: 12px; color: var(--cream-dim); margin-top: 10px; }
+  .footer-line { font-size: 10px; color: var(--cream-dim); opacity: .7; margin-top: 5px; letter-spacing: .3px; }
+</style>
+</head>
+<body>
+  <div class="hero-glow"></div>
+  <div class="frame"></div>
+  <div class="content">
+    <svg class="flute" width="80" height="22" viewBox="0 0 80 22" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="11" x2="30" y2="11" stroke="#d6b05c" stroke-width="1"/>
+      <circle cx="40" cy="11" r="4.5" fill="none" stroke="#d6b05c" stroke-width="1"/>
+      <line x1="50" y1="11" x2="80" y2="11" stroke="#d6b05c" stroke-width="1"/>
+    </svg>
+    <div class="eyebrow">A Benefit for the Altadena Town &amp; Country Club</div>
+    <h1>Champagne<span class="amp">&amp;</span>Caviar</h1>
+    <div class="sub">Champagne, caviar, and a little mischief — to put recording cameras on our courts.</div>
+    <div class="urgent">Seats are limited and this night will sell out — get on the list now.</div>
+
+    <div class="meta">
+      <div><span class="k">When</span>Saturday, September 19 · 6:00 PM</div>
+      <div><span class="k">Where</span>Home of Melinda &amp; Matt Nix</div>
+      <div><span class="k">Attire</span>Black Tie Optional</div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="ticket-card">
+      <div class="price">$250 <small>/ guest</small></div>
+      <div class="incl">Admission, champagne &amp; caviar all evening, full food &amp; lounge access, and entry to the live auction.</div>
+    </div>
+
+    <div class="cause">Proceeds bring <b>PlaySight SmartCourt cameras</b> to ATCC — capturing every match and rally so members and pros can review play, sharpen technique, and train smarter. One unforgettable night; a lasting upgrade for everyone who steps on court.</div>
+
+    <div class="btn-gold">Count Me In</div>
+    <div class="rsvp-sub">atcc-tennis.github.io/champagne-caviar</div>
+    <div class="footer-line">No payment required to join the list · Not tax-deductible</div>
+  </div>
+</body>
+</html>
