@@ -125,6 +125,7 @@
   .ticket-card .price{font-family:'Playfair Display',serif;font-size:62px;color:var(--gold-soft)}
   .ticket-card .price small{font-size:20px;color:var(--cream-dim);font-weight:300}
   .ticket-card .incl{color:var(--cream-dim);margin:14px 0 22px;font-size:16.5px}
+  .pay-note{font-size:12.5px;color:var(--cream-dim);opacity:.85;margin-top:14px;letter-spacing:.02em}
 
   /* HOSTS */
   .tiers{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-bottom:40px}
@@ -161,8 +162,8 @@
   .cat.taken .claimed{background:var(--gold);color:#221a06;border-color:var(--gold);font-weight:600}
   .cat .hostedby{display:block;font-size:12px;color:var(--gold-soft);margin-top:5px;letter-spacing:.02em;text-transform:none;font-family:'Jost',sans-serif;font-weight:400}
   .cat .claimed{margin-left:auto;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);border-radius:20px;padding:3px 10px;white-space:nowrap;align-self:flex-start}
-  .hb-list{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:920px;margin:0 auto}
-  .hb{border:1px solid var(--gold);border-radius:12px;padding:26px 36px;background:linear-gradient(180deg,rgba(214,176,92,.12),rgba(46,40,31,.6));text-align:center;min-width:300px;box-shadow:0 18px 44px -28px rgba(214,176,92,.6)}
+  .hb-list{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:960px;margin:0 auto}
+  .hb{border:1px solid var(--gold);border-radius:12px;padding:26px 28px;background:linear-gradient(180deg,rgba(214,176,92,.12),rgba(46,40,31,.6));text-align:center;width:280px;min-height:172px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 18px 44px -28px rgba(214,176,92,.6)}
   .hb-cat{display:block;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--blush);margin-bottom:8px}
   .hb-title{display:block;font-family:'Playfair Display',serif;font-size:28px;color:var(--gold-soft);margin-bottom:10px;line-height:1.15}
   .hb-name{font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);font-weight:600}
@@ -209,6 +210,7 @@
     .cause-grid,.tiers,.cats,.auc-grid,.two{grid-template-columns:1fr}
     section{padding:56px 0}
     .hero{padding:70px 0 60px}
+    .hb{width:100%;max-width:360px}
   }
 </style>
 </head>
@@ -221,14 +223,14 @@
     <div class="eyebrow">A benefit for the Altadena Town &amp; Country Club</div>
     <h1>Champagne<span class="amp">&amp;</span>Caviar</h1>
     <p class="sub">Champagne, caviar, and a little mischief — to put recording cameras on our courts.</p>
-    <p class="urgent">Seats are limited and this night will sell out — get on the list now.</p>
+    <p class="urgent">Seats are limited and this night will sell out — get yours now.</p>
     <div class="meta">
       <div><span class="k">When</span> Saturday, September 19 · 6:00 PM</div>
       <div><span class="k">Where</span> Home of Melinda &amp; Matt Nix</div>
       <div><span class="k">Attire</span> Black Tie Optional</div>
     </div>
     <div class="cta-row">
-      <a href="#rsvp" class="btn btn-gold">Count Me In</a>
+      <a href="#tickets" class="btn btn-gold">Buy Tickets</a>
       <a href="#host" class="btn btn-ghost">Become a Host</a>
     </div>
   </div>
@@ -243,10 +245,11 @@
     </div>
     <div class="group-label"><span class="amt">$2,500</span><span class="lab">Marquee Hosts</span></div>
     <div class="hb-list">
-      <div class="hb"><span class="hb-cat">The Bar</span><span class="hb-title">Top Shelf</span><span class="hb-name">Steve &amp; Cynthia Khachi</span></div>
-      <div class="hb"><span class="hb-cat">Champagne</span><span class="hb-title">Serve &amp; Sparkle</span><span class="hb-name">The Bickerstaffes &amp; The Kopoushians</span></div>
+      <div class="hb"><span class="hb-cat">The Bar</span><span class="hb-title">Top Shelf</span><span class="hb-name">The Khachis</span></div>
+      <div class="hb"><span class="hb-cat">Champagne</span><span class="hb-title">Serve &amp; Sparkle</span><span class="hb-name">The Bickerstaffes &amp;<br>The Kopoushians</span></div>
       <div class="hb"><span class="hb-cat">Caviar</span><span class="hb-title">Caviar Court</span><span class="hb-name">Joan Nguyen &amp; Brandon Tran</span></div>
       <div class="hb"><span class="hb-cat">Ice Luge</span><span class="hb-title">Ice Ice Baby</span><span class="hb-name">Noel &amp; Sky Minor</span></div>
+      <div class="hb"><span class="hb-cat">Décor &amp; Photobooth</span><span class="hb-title">Strike a Pose</span><span class="hb-name">The Azats &amp;<br>The Blacks</span></div>
     </div>
     <div class="group-label" style="margin-top:30px"><span class="amt">$1,000</span><span class="lab">Hosts</span></div>
     <div class="hb-list">
@@ -286,7 +289,7 @@
 </section>
 
 <!-- TICKETS -->
-<section>
+<section id="tickets">
   <div class="wrap tickets-inner">
     <div class="section-head" style="margin-bottom:30px">
       <div class="eyebrow">Reserve your spot</div>
@@ -296,7 +299,8 @@
       <div class="price">$250<small> / guest</small></div>
       <p class="incl">Admission, champagne &amp; caviar all evening, full food &amp; lounge access, and entry to the live auction.</p>
       <p style="color:var(--gold-soft);font-weight:500;font-size:14px;margin:0 0 24px">Limited tickets — this event will sell out. Grab yours early.</p>
-      <a href="#rsvp" class="btn btn-gold">Count Me In</a>
+      <a href="https://buy.stripe.com/4gMaEX2sw47M55a7Mx9b000" class="btn btn-gold">Buy Tickets</a>
+      <p class="pay-note">Choose your number of guests at checkout · Secure checkout via Stripe</p>
     </div>
   </div>
 </section>
@@ -322,6 +326,7 @@
           <li>Recognition from the mic &amp; on social</li>
           <li>Reserved space in the Cigars &amp; Scotch lounge</li>
         </ul>
+        <div style="text-align:center;margin-top:24px"><a href="https://buy.stripe.com/eVqfZh7MQawafJOaYJ9b002" class="btn btn-gold">Become a Marquee Host</a></div>
       </div>
       <div class="tier">
         <h3>Host</h3>
@@ -332,20 +337,21 @@
           <li>2 event tickets included</li>
           <li>Recognition on social</li>
         </ul>
+        <div style="text-align:center;margin-top:24px"><a href="https://buy.stripe.com/00wbJ10kocEidBG0k59b001" class="btn btn-gold">Become a Host</a></div>
       </div>
     </div>
 
     <div class="cats-head">
       <h3>Choose your character</h3>
-      <p>Pick the experience you'd like to host — each comes with its own title for the night.</p>
+      <p>Pick the experience you'd like to host — each comes with its own title for the night. Note your pick at checkout or let us know.</p>
     </div>
 
     <div class="cat-group">
       <div class="group-label"><span class="amt">$2,500</span><span class="lab">Marquee Hosts</span></div>
       <div class="cats">
-        <div class="cat m"><div><div class="nm">Strike a Pose</div><span class="base">Décor &amp; Photobooth</span></div></div>
+        <div class="cat m taken"><div><div class="nm">Strike a Pose</div><span class="base">Décor &amp; Photobooth</span><span class="hostedby">Hosted by The Azats &amp; The Blacks</span></div><span class="claimed">Claimed</span></div>
         <div class="cat m"><div><div class="nm">The Munchie Lounge</div><span class="base">Munchies &amp; late-night snacks</span></div></div>
-        <div class="cat m taken"><div><div class="nm">Top Shelf</div><span class="base">The Bar</span><span class="hostedby">Hosted by Steve &amp; Cynthia Khachi</span></div><span class="claimed">Claimed</span></div>
+        <div class="cat m taken"><div><div class="nm">Top Shelf</div><span class="base">The Bar</span><span class="hostedby">Hosted by The Khachis</span></div><span class="claimed">Claimed</span></div>
         <div class="cat m taken"><div><div class="nm">Serve &amp; Sparkle</div><span class="base">Champagne</span><span class="hostedby">Hosted by The Bickerstaffes &amp; The Kopoushians</span></div><span class="claimed">Claimed</span></div>
         <div class="cat m taken"><div><div class="nm">Caviar Court</div><span class="base">Caviar</span><span class="hostedby">Hosted by Joan Nguyen &amp; Brandon Tran</span></div><span class="claimed">Claimed</span></div>
         <div class="cat m taken"><div><div class="nm">Ice Ice Baby</div><span class="base">Ice Luge</span><span class="hostedby">Hosted by Noel &amp; Sky Minor</span></div><span class="claimed">Claimed</span></div>
@@ -369,7 +375,7 @@
         <div class="cat taken"><div><div class="nm">Cheese &amp; Thank You</div><span class="base">Grazing Table · savory</span><span class="hostedby">Hosted by Jenn &amp; Richard Wilkinson</span></div><span class="claimed">Claimed</span></div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:16px"><a href="#rsvp" class="btn btn-gold">Count Me In</a></div>
+    <p style="text-align:center;color:var(--cream-dim);font-size:15px;margin-top:10px">Ready? Choose <b style="color:var(--gold-soft)">Host</b> or <b style="color:var(--gold-soft)">Marquee Host</b> above to claim your spot and check out securely.</p>
   </div>
 </section>
 
@@ -377,7 +383,7 @@
 <section class="auction">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Paddles up</div>
+      <div class="eyebrow">Going once, going twice</div>
       <h2>The Live Auction</h2>
       <p>Bid on once-in-a-while experiences — with every dollar going straight to the courts.</p>
       <div class="rule"></div>
@@ -388,6 +394,7 @@
       <div class="auc"><span class="ico">🏟️</span><h4>Best Seats in the House</h4><p>Tickets to marquee sporting events you won't want to miss.</p></div>
     </div>
     <div style="text-align:center;margin-top:38px">
+      <div style="margin-bottom:26px"><a href="auction-items.html" class="btn btn-gold">Preview the Auction Lineup →</a></div>
       <p style="color:var(--cream-dim);font-size:16px;margin-bottom:18px">Have something worth bidding on? Donate an item or experience to the auction.</p>
       <a href="mailto:noel.atcc@gmail.com,melindastahl@sbcglobal.net?subject=Auction%20Item%20Donation%20—%20Champagne%20%26%20Caviar" class="btn btn-ghost">Donate an Auction Item</a>
     </div>
@@ -398,9 +405,9 @@
 <section class="rsvp" id="rsvp">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Count me in</div>
+      <div class="eyebrow">Not ready to check out?</div>
       <h2>I'm IN!</h2>
-      <p>Ticketing opens shortly — spots are limited and this night will sell out. Tell us you're coming, and we'll send you the link to grab your tickets (and claim a host spot) the moment it's live.</p>
+      <p>Prefer to pay later, by check, or have a question first? Tell us you're coming and we'll hold your spot — or use <b style="color:var(--gold-soft)">Buy Tickets</b> above to check out now. Can't attend at all? <a href="#give" style="color:var(--gold-soft);text-decoration:underline">Contribute to the courts →</a></p>
       <div class="rule"></div>
     </div>
     <form id="rsvpForm" onsubmit="imIn(event)">
@@ -432,7 +439,7 @@
       </div>
       <div class="field" style="margin-top:4px"><label>Anything you'd like us to know? (optional)</label><input id="f_note" type="text"></div>
       <div style="text-align:center;margin-top:26px"><button class="btn btn-gold" type="submit" style="width:100%">I'm IN! 🥂</button></div>
-      <p class="note">No payment now — we'll email you the ticket &amp; host-payment link the moment it opens. Champagne &amp; Caviar benefits the ATCC court-camera fund; contributions are not tax-deductible.</p>
+      <p class="note">Ready to pay now? Use Buy Tickets or Become a Host above. Champagne &amp; Caviar benefits the ATCC court-camera fund; contributions are not tax-deductible.</p>
     </form>
   </div>
 </section>
@@ -440,16 +447,16 @@
 <!-- ADDITIONAL CONTRIBUTION — staged. To activate: (1) paste your Stripe custom-amount
      ("customer chooses price") payment link into DONATE_LINK in the script below, and
      (2) remove style="display:none" from this section. -->
-<section id="give" style="display:none;padding:72px 0;border-top:1px solid var(--line)">
+<section id="give" style="padding:72px 0;border-top:1px solid var(--line)">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Give a little more</div>
-      <h2>Fund the Courts</h2>
-      <p>Beyond your ticket, every extra dollar goes straight to bringing PlaySight SmartCourt cameras to ATCC. Chip in any amount — every bit counts.</p>
+      <div class="eyebrow">Can't make it? Still make it count</div>
+      <h2>Contribute to the Courts</h2>
+      <p>Can't attend but want to support the effort? Chip in any amount toward bringing PlaySight SmartCourt cameras to ATCC — every dollar goes straight to the courts.</p>
       <div class="rule"></div>
     </div>
-    <div style="text-align:center;color:var(--cream-dim);margin:6px 0 22px;font-size:16px">Suggested: $100 · $250 · $500 · or any amount you choose</div>
-    <div style="text-align:center"><a href="#" class="btn btn-gold" onclick="donate();return false;">Give to the Cause →</a></div>
+    <div style="text-align:center;color:var(--cream-dim);margin:6px 0 22px;font-size:16px">Give whatever feels right — you'll choose your amount at checkout.</div>
+    <div style="text-align:center"><a href="#" class="btn btn-gold" onclick="donate();return false;">Contribute →</a></div>
     <p style="text-align:center;margin-top:20px;color:var(--cream-dim);font-size:13px;opacity:.75">Contributions benefit the ATCC court-camera fund and are not tax-deductible.</p>
   </div>
 </section>
@@ -480,13 +487,13 @@
       '<div style="text-align:center;padding:26px 0">' +
       '<div style="font-size:44px;margin-bottom:6px">🥂</div>' +
       '<h3 style="color:var(--cream);font-size:27px;margin:0 0 12px">You\'re on the list!</h3>' +
-      '<p style="color:var(--cream-dim);max-width:490px;margin:0 auto;line-height:1.6">You\'re counted in. When tickets go on sale, we\'ll invite you right back here to grab yours and process payment. See you on the 19th!</p>' +
+      '<p style="color:var(--cream-dim);max-width:490px;margin:0 auto;line-height:1.6">You\'re counted in. You can check out anytime with the <b style="color:var(--gold-soft)">Buy Tickets</b> button up top — otherwise we\'ll be in touch. See you on the 19th!</p>' +
       '</div>';
   }
 
   /* ===== ADDITIONAL CONTRIBUTION — paste your Stripe custom-amount payment link
      ("customer chooses what to pay") below, then reveal the #give section. ===== */
-  var DONATE_LINK = "";
+  var DONATE_LINK = "https://buy.stripe.com/cNi28rfficEi69e1o99b003";
   function donate(){
     if(!DONATE_LINK){ alert("Donations open soon — thank you for wanting to give more!"); return; }
     window.location.href = DONATE_LINK;
