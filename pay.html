@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment &amp; Hosting — Champagne &amp; Caviar · ATCC</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--gold:#d6b05c;--gold-soft:#f0dca2;--cream:#f8f2e6;--cream-dim:#ded6c4;--blush:#e0a184;--line:rgba(214,176,92,.32);--ink2:#2e281f}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:linear-gradient(180deg,#2a231b 0%,#1e1912 55%,#262018 100%);background-attachment:fixed;color:var(--cream);font-family:'Jost',sans-serif;font-weight:300;font-size:18px;line-height:1.7;letter-spacing:.2px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:600;letter-spacing:.3px;line-height:1.18}
+  a{color:inherit}
+  .wrap{max-width:840px;margin:0 auto;padding:0 26px}
+  .eyebrow{font-family:'Jost',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.42em;font-size:12px;color:var(--gold)}
+  .btn{display:inline-block;cursor:pointer;border:none;font-family:'Jost',sans-serif;font-weight:500;letter-spacing:.16em;text-transform:uppercase;font-size:14px;padding:15px 34px;border-radius:2px;transition:.25s;text-decoration:none}
+  .btn-gold{background:linear-gradient(180deg,var(--gold-soft),var(--gold));color:#221a06}
+  .btn-gold:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--cream-dim);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-soft)}
+  .topbar{text-align:center;padding:24px 0 0}
+  .topbar a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-dim);text-decoration:none}
+  .topbar a:hover{color:var(--gold-soft)}
+  .head{text-align:center;padding:40px 0 10px}
+  .flute{font-size:32px}
+  .eyebrow-top{margin-top:6px}
+  .script{font-family:'Great Vibes',cursive;font-weight:400;color:var(--cream);font-size:clamp(46px,8vw,80px);line-height:.95;margin:6px 0 4px}
+  .lede{font-size:18px;color:var(--cream-dim);max-width:600px;margin:16px auto 0;line-height:1.65}
+  .rule{width:64px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:28px auto}
+
+  .card{border:1px solid var(--line);border-radius:14px;padding:32px 30px;background:linear-gradient(180deg,rgba(214,176,92,.05),rgba(46,40,31,.5));margin:0 auto 22px;max-width:600px;text-align:center}
+  .card.feature{border-color:var(--gold);box-shadow:0 20px 54px -34px rgba(214,176,92,.6)}
+  .kicker{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--blush);margin-bottom:8px}
+  .card h3{font-size:26px;color:var(--cream);margin-bottom:4px}
+  .price{font-family:'Playfair Display',serif;font-size:44px;color:var(--gold-soft);margin:6px 0 4px}
+  .price small{font-size:16px;color:var(--cream-dim);font-weight:300;font-family:'Jost',sans-serif}
+  .incl{color:var(--cream-dim);font-size:15.5px;line-height:1.55;max-width:440px;margin:8px auto 20px}
+  .sub-note{font-size:12.5px;color:var(--cream-dim);opacity:.85;margin-top:12px;letter-spacing:.02em}
+
+  .tiers{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:600px;margin:0 auto 22px}
+  .tier{border:1px solid var(--line);border-radius:14px;padding:28px 24px;background:linear-gradient(180deg,rgba(214,176,92,.05),rgba(46,40,31,.5));text-align:center;display:flex;flex-direction:column}
+  .tier.marquee{border-color:var(--gold)}
+  .tier h4{font-size:20px;color:var(--cream);margin-bottom:4px}
+  .tier .tp{font-family:'Playfair Display',serif;font-size:34px;color:var(--gold-soft);margin:4px 0 10px}
+  .tier .tinc{color:var(--cream-dim);font-size:14px;line-height:1.5;margin-bottom:20px;flex:1}
+  .tier .btn{align-self:center;padding:12px 24px;font-size:13px}
+
+  .section-label{text-align:center;margin:34px auto 18px}
+  .section-label .eyebrow{display:block}
+  .section-label h2{font-size:clamp(24px,4vw,30px);color:var(--cream);margin-top:6px}
+
+  .payinfo{max-width:600px;margin:26px auto 0;text-align:center;color:var(--cream-dim);font-size:13px;line-height:1.6;opacity:.85}
+  .foot{text-align:center;color:var(--cream-dim);opacity:.7;font-size:13px;padding:24px 0 46px;letter-spacing:.02em}
+  @media(max-width:600px){.tiers{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><a href="index.html">← Back to the event page</a></div>
+
+<div class="head">
+  <div class="flute">🥂</div>
+  <div class="eyebrow eyebrow-top">Tickets · Hosting · Giving</div>
+  <div class="script">Champagne &amp; Caviar</div>
+  <p class="lede">Thank you for supporting the ATCC court-camera fund. Complete your ticket, host contribution, or gift below.</p>
+  <div class="rule"></div>
+</div>
+
+<div class="wrap">
+
+  <!-- TICKETS -->
+  <div class="section-label"><span class="eyebrow">Reserve your spot</span><h2>Tickets</h2></div>
+  <div class="card feature">
+    <div class="price">$250<small> / guest</small></div>
+    <p class="incl">Admission, champagne &amp; caviar all evening, full food &amp; lounge access, and entry to the live auction.</p>
+    <a href="https://buy.stripe.com/4gMaEX2sw47M55a7Mx9b000" class="btn btn-gold">Buy Tickets</a>
+    <p class="sub-note">Choose your number of guests at checkout</p>
+  </div>
+
+  <!-- HOSTING -->
+  <div class="section-label"><span class="eyebrow">Put your name on the night</span><h2>Become a Host</h2></div>
+  <div class="tiers">
+    <div class="tier">
+      <h4>Host</h4>
+      <div class="tp">$1,000</div>
+      <div class="tinc">Host one signature station or moment · named on signage &amp; program · 2 tickets included · recognition on social.</div>
+      <a href="https://buy.stripe.com/00wbJ10kocEidBG0k59b001" class="btn btn-gold">Become a Host</a>
+    </div>
+    <div class="tier marquee">
+      <h4>Marquee Host</h4>
+      <div class="tp">$2,500</div>
+      <div class="tinc">Host a headline experience · top billing on signage &amp; program · 4 tickets included · recognition from the mic &amp; on social · Cigars &amp; Scotch lounge.</div>
+      <a href="https://buy.stripe.com/eVqfZh7MQawafJOaYJ9b002" class="btn btn-gold">Become a Marquee Host</a>
+    </div>
+  </div>
+
+  <!-- CONTRIBUTE -->
+  <div class="section-label"><span class="eyebrow">Can't attend? Still make it count</span><h2>Contribute to the Courts</h2></div>
+  <div class="card">
+    <p class="incl">Chip in any amount toward bringing PlaySight cameras to ATCC — every dollar goes straight to the courts. Choose your amount at checkout.</p>
+    <a href="https://buy.stripe.com/cNi28rfficEi69e1o99b003" class="btn btn-gold">Contribute →</a>
+  </div>
+
+  <p class="payinfo">Secure checkout via Stripe. Payment is by bank transfer (ACH), so it may show as “pending” for a few days after you submit — that's normal. Champagne &amp; Caviar benefits the ATCC court-camera fund; contributions are not tax-deductible.</p>
+
+</div>
+
+<div class="foot">A benefit for the Altadena Town &amp; Country Club · Saturday, September 19</div>
+
+</body>
+</html>
