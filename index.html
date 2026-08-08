@@ -223,14 +223,14 @@
     <div class="eyebrow">A benefit for the Altadena Town &amp; Country Club</div>
     <h1>Champagne<span class="amp">&amp;</span>Caviar</h1>
     <p class="sub">Champagne, caviar, and a little mischief — to put recording cameras on our courts.</p>
-    <p class="urgent">Seats are limited and this night will sell out — get yours now.</p>
+    <p class="urgent">Seats are limited and this night will sell out — get on the list now.</p>
     <div class="meta">
       <div><span class="k">When</span> Saturday, September 19 · 6:00 PM</div>
       <div><span class="k">Where</span> Home of Melinda &amp; Matt Nix</div>
       <div><span class="k">Attire</span> Black Tie Optional</div>
     </div>
     <div class="cta-row">
-      <a href="#tickets" class="btn btn-gold">Buy Tickets</a>
+      <a href="#rsvp" class="btn btn-gold">Count Me In</a>
       <a href="#host" class="btn btn-ghost">Become a Host</a>
     </div>
   </div>
@@ -300,8 +300,7 @@
       <div class="price">$250<small> / guest</small></div>
       <p class="incl">Admission, champagne &amp; caviar all evening, full food &amp; lounge access, and entry to the live auction.</p>
       <p style="color:var(--gold-soft);font-weight:500;font-size:14px;margin:0 0 24px">Limited tickets — this event will sell out. Grab yours early.</p>
-      <a href="https://buy.stripe.com/4gMaEX2sw47M55a7Mx9b000" class="btn btn-gold">Buy Tickets</a>
-      <p class="pay-note">Choose your number of guests at checkout · Secure checkout via Stripe</p>
+      <a href="#rsvp" class="btn btn-gold">Count Me In</a>
     </div>
   </div>
 </section>
@@ -327,7 +326,6 @@
           <li>Recognition from the mic &amp; on social</li>
           <li>Reserved space in the Cigars &amp; Scotch lounge</li>
         </ul>
-        <div style="text-align:center;margin-top:24px"><a href="https://buy.stripe.com/eVqfZh7MQawafJOaYJ9b002" class="btn btn-gold">Become a Marquee Host</a></div>
       </div>
       <div class="tier">
         <h3>Host</h3>
@@ -338,7 +336,6 @@
           <li>2 event tickets included</li>
           <li>Recognition on social</li>
         </ul>
-        <div style="text-align:center;margin-top:24px"><a href="https://buy.stripe.com/00wbJ10kocEidBG0k59b001" class="btn btn-gold">Become a Host</a></div>
       </div>
     </div>
 
@@ -376,7 +373,7 @@
         <div class="cat taken"><div><div class="nm">Cheese &amp; Thank You</div><span class="base">Grazing Table · savory</span><span class="hostedby">Hosted by Jenn &amp; Richard Wilkinson</span></div><span class="claimed">Claimed</span></div>
       </div>
     </div>
-    <p style="text-align:center;color:var(--cream-dim);font-size:15px;margin-top:10px">Ready? Choose <b style="color:var(--gold-soft)">Host</b> or <b style="color:var(--gold-soft)">Marquee Host</b> above to claim your spot and check out securely.</p>
+    <div style="text-align:center;margin-top:16px"><a href="#rsvp" class="btn btn-gold">Count Me In</a></div>
   </div>
 </section>
 
@@ -405,9 +402,9 @@
 <section class="rsvp" id="rsvp">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Not ready to check out?</div>
+      <div class="eyebrow">Count me in</div>
       <h2>I'm IN!</h2>
-      <p>Prefer to pay later, by check, or have a question first? Tell us you're coming and we'll hold your spot — or use <b style="color:var(--gold-soft)">Buy Tickets</b> above to check out now. Can't attend at all? <a href="#give" style="color:var(--gold-soft);text-decoration:underline">Contribute to the courts →</a></p>
+      <p>Ticketing opens shortly — spots are limited and this night will sell out. Tell us you're coming, and we'll send you the link to grab your tickets (and claim a host spot) the moment it's live.</p>
       <div class="rule"></div>
     </div>
     <form id="rsvpForm" onsubmit="imIn(event)">
@@ -439,7 +436,7 @@
       </div>
       <div class="field" style="margin-top:4px"><label>Anything you'd like us to know? (optional)</label><input id="f_note" type="text"></div>
       <div style="text-align:center;margin-top:26px"><button class="btn btn-gold" type="submit" style="width:100%">I'm IN! 🥂</button></div>
-      <p class="note">Ready to pay now? Use Buy Tickets or Become a Host above. Champagne &amp; Caviar benefits the ATCC court-camera fund; contributions are not tax-deductible.</p>
+      <p class="note">No payment now — we'll email you the ticket &amp; host-payment link the moment it opens. Champagne &amp; Caviar benefits the ATCC court-camera fund; contributions are not tax-deductible.</p>
     </form>
   </div>
 </section>
@@ -447,7 +444,7 @@
 <!-- ADDITIONAL CONTRIBUTION — staged. To activate: (1) paste your Stripe custom-amount
      ("customer chooses price") payment link into DONATE_LINK in the script below, and
      (2) remove style="display:none" from this section. -->
-<section id="give" style="padding:72px 0;border-top:1px solid var(--line)">
+<section id="give" style="display:none;padding:72px 0;border-top:1px solid var(--line)">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Can't make it? Still make it count</div>
@@ -487,7 +484,7 @@
       '<div style="text-align:center;padding:26px 0">' +
       '<div style="font-size:44px;margin-bottom:6px">🥂</div>' +
       '<h3 style="color:var(--cream);font-size:27px;margin:0 0 12px">You\'re on the list!</h3>' +
-      '<p style="color:var(--cream-dim);max-width:490px;margin:0 auto;line-height:1.6">You\'re counted in. You can check out anytime with the <b style="color:var(--gold-soft)">Buy Tickets</b> button up top — otherwise we\'ll be in touch. See you on the 19th!</p>' +
+      '<p style="color:var(--cream-dim);max-width:490px;margin:0 auto;line-height:1.6">You\'re counted in. When tickets go on sale, we\'ll invite you right back here to grab yours and process payment. See you on the 19th!</p>' +
       '</div>';
   }
 
