@@ -158,8 +158,11 @@
   .cat .base{display:block;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:4px}
   .cat .lvl{margin-left:auto;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-dim);white-space:nowrap;padding-top:3px}
   .cat.m{border-color:var(--gold);background:rgba(201,164,76,.06)}
-  .cat.taken{opacity:1;border-color:var(--gold);background:linear-gradient(180deg,rgba(214,176,92,.18),rgba(214,176,92,.05))}
-  .cat.taken .claimed{background:var(--gold);color:#221a06;border-color:var(--gold);font-weight:600}
+  .cat.taken{opacity:.9;border-color:var(--line);background:rgba(255,255,255,.02)}
+  .cat.taken .claimed{background:transparent;color:var(--cream-dim);border-color:var(--line);font-weight:500}
+  .cat.avail{border-color:var(--gold);background:linear-gradient(180deg,rgba(214,176,92,.16),rgba(214,176,92,.04));box-shadow:0 0 24px -6px rgba(214,176,92,.55)}
+  .cat.avail .nm{color:var(--gold-soft)}
+  .cat .avail-badge{margin-left:auto;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#221a06;background:linear-gradient(180deg,var(--gold-soft),var(--gold));border-radius:20px;padding:4px 12px;white-space:nowrap;font-weight:700;align-self:flex-start}
   .cat .hostedby{display:block;font-size:12px;color:var(--gold-soft);margin-top:5px;letter-spacing:.02em;text-transform:none;font-family:'Jost',sans-serif;font-weight:400}
   .cat .claimed{margin-left:auto;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);border-radius:20px;padding:3px 10px;white-space:nowrap;align-self:flex-start}
   .hb-list{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:960px;margin:0 auto}
@@ -347,8 +350,8 @@
     <div class="cat-group">
       <div class="group-label"><span class="amt">$2,500</span><span class="lab">Marquee Hosts</span></div>
       <div class="cats">
+        <div class="cat m avail"><div><div class="nm">The Munchie Lounge</div><span class="base">Munchies &amp; late-night snacks</span></div><span class="avail-badge">Still Available</span></div>
         <div class="cat m taken"><div><div class="nm">Strike a Pose</div><span class="base">Décor &amp; Photobooth</span><span class="hostedby">Hosted by The Azats &amp; The Blacks</span></div><span class="claimed">Claimed</span></div>
-        <div class="cat m"><div><div class="nm">The Munchie Lounge</div><span class="base">Munchies &amp; late-night snacks</span></div></div>
         <div class="cat m taken"><div><div class="nm">Top Shelf</div><span class="base">The Bar</span><span class="hostedby">Hosted by The Khachis</span></div><span class="claimed">Claimed</span></div>
         <div class="cat m taken"><div><div class="nm">Serve &amp; Sparkle</div><span class="base">Champagne</span><span class="hostedby">Hosted by The Bickerstaffes &amp; The Kopoushians</span></div><span class="claimed">Claimed</span></div>
         <div class="cat m taken"><div><div class="nm">Caviar Court</div><span class="base">Caviar</span><span class="hostedby">Hosted by Joan Nguyen &amp; Brandon Tran</span></div><span class="claimed">Claimed</span></div>
@@ -359,16 +362,16 @@
     <div class="cat-group">
       <div class="group-label"><span class="amt">$1,000</span><span class="lab">Hosts</span></div>
       <div class="cats">
-        <div class="cat"><div><div class="nm">Aces of Bass</div><span class="base">DJ</span></div></div>
-        <div class="cat"><div><div class="nm">Spin Doctors</div><span class="base">DJ</span></div></div>
-        <div class="cat"><div><div class="nm">Havana Nights</div><span class="base">Cigars</span></div></div>
-        <div class="cat"><div><div class="nm">Shot Callers</div><span class="base">Shots</span></div></div>
-        <div class="cat"><div><div class="nm">Sweet Spot</div><span class="base">Dessert Table</span></div></div>
+        <div class="cat avail"><div><div class="nm">Aces of Bass</div><span class="base">DJ</span></div><span class="avail-badge">Still Available</span></div>
+        <div class="cat avail"><div><div class="nm">Spin Doctors</div><span class="base">DJ</span></div><span class="avail-badge">Still Available</span></div>
+        <div class="cat avail"><div><div class="nm">Havana Nights</div><span class="base">Cigars</span></div><span class="avail-badge">Still Available</span></div>
+        <div class="cat avail"><div><div class="nm">Shot Callers</div><span class="base">Shots</span></div><span class="avail-badge">Still Available</span></div>
+        <div class="cat avail"><div><div class="nm">Sweet Spot</div><span class="base">Dessert Table</span></div><span class="avail-badge">Still Available</span></div>
+        <div class="cat avail"><div><div class="nm">Pasta La Vista</div><span class="base">Pasta</span></div><span class="avail-badge">Still Available</span></div>
+        <div class="cat avail"><div><div class="nm">Line Judges</div><span class="base">Event Support</span></div><span class="avail-badge">Still Available</span></div>
+        <div class="cat avail"><div><div class="nm">Ground Crew</div><span class="base">Event Support</span></div><span class="avail-badge">Still Available</span></div>
+        <div class="cat avail"><div><div class="nm">G.O.A.T.</div><span class="base">Pros &amp; Staff</span></div><span class="avail-badge">Still Available</span></div>
         <div class="cat taken"><div><div class="nm">Slice Slice Baby</div><span class="base">Pizza</span><span class="hostedby">Hosted by Christy &amp; Scott Jenstad</span></div><span class="claimed">Claimed</span></div>
-        <div class="cat"><div><div class="nm">Pasta La Vista</div><span class="base">Pasta</span></div></div>
-        <div class="cat"><div><div class="nm">Line Judges</div><span class="base">Event Support</span></div></div>
-        <div class="cat"><div><div class="nm">Ground Crew</div><span class="base">Event Support</span></div></div>
-        <div class="cat"><div><div class="nm">G.O.A.T.</div><span class="base">Pros &amp; Staff</span></div></div>
         <div class="cat taken"><div><div class="nm">Neat Freaks</div><span class="base">Scotch</span><span class="hostedby">Hosted by Danny &amp; Danielle Kronfli</span></div><span class="claimed">Claimed</span></div>
         <div class="cat taken"><div><div class="nm">Cheese &amp; Thank You</div><span class="base">Grazing Table · savory</span><span class="hostedby">Hosted by Jenn &amp; Richard Wilkinson</span></div><span class="claimed">Claimed</span></div>
       </div>
