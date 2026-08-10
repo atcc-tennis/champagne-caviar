@@ -430,14 +430,14 @@
       <div class="two">
         <div class="field">
           <label>How many guests? (including you)</label>
-          <select id="f_party">
+          <select id="f_party" onchange="calcTotal()">
             <option>1</option><option selected>2</option><option>3</option><option>4</option>
             <option>5</option><option>6</option><option>8</option><option>10</option><option>Not sure yet</option>
           </select>
         </div>
         <div class="field">
           <label>I'm signing up for</label>
-          <select id="f_host">
+          <select id="f_host" onchange="calcTotal()">
             <option value="Tickets">Tickets ($250 / guest)</option>
             <option value="Host ($1,000)">Host — $1,000</option>
             <option value="Marquee Host ($2,500)">Marquee Host — $2,500</option>
@@ -445,19 +445,12 @@
           </select>
         </div>
       </div>
-      <div class="two">
-        <div class="field">
-          <label>How will you pay?</label>
-          <select id="f_pay">
-            <option value="Zelle">Zelle</option>
-            <option value="Venmo">Venmo</option>
-            <option value="Card">Card</option>
-            <option value="Bank transfer (ACH)">Bank transfer (ACH)</option>
-            <option value="Not sure yet">Not sure yet</option>
-          </select>
-        </div>
-        <div class="field"><label>Anything you'd like us to know? (optional)</label><input id="f_note" type="text"></div>
+      <div id="totalBox" style="text-align:center;margin:20px auto 0;padding:16px 20px;border:1px solid var(--gold);border-radius:12px;background:rgba(214,176,92,.07);max-width:380px">
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream-dim)">Amount to Send</div>
+        <div id="totalAmt" style="font-family:'Playfair Display',serif;font-size:36px;color:var(--gold-soft);margin-top:2px;line-height:1.1">$500</div>
+        <div id="totalNote" style="font-size:12.5px;color:var(--cream-dim);margin-top:3px">2 tickets × $250</div>
       </div>
+      <div class="field" style="margin-top:16px"><label>Anything you'd like us to know? (optional)</label><input id="f_note" type="text"></div>
       <div style="text-align:center;margin-top:26px"><button class="btn btn-gold" type="submit" style="width:100%">Reserve &amp; Continue to Payment →</button></div>
       <p class="note">Next step: choose Zelle, Venmo, or card on the payment page. Champagne &amp; Caviar benefits the ATCC court-camera fund; contributions are not tax-deductible.</p>
     </form>
@@ -490,12 +483,28 @@
 </footer>
 
 <script>
+  function calcTotal(){
+    var host = document.getElementById('f_host').value;
+    var party = parseInt(document.getElementById('f_party').value, 10);
+    var amtEl = document.getElementById('totalAmt');
+    var noteEl = document.getElementById('totalNote');
+    if(host === 'Tickets'){
+      if(isNaN(party)){ amtEl.textContent = '$250 / guest'; noteEl.textContent = 'Choose your number of guests'; window.__ccTotal = 'TBD'; return; }
+      var t = party * 250; window.__ccTotal = t;
+      amtEl.textContent = '$' + t.toLocaleString();
+      noteEl.textContent = party + (party === 1 ? ' ticket' : ' tickets') + ' × $250';
+    } else if(host === 'Host ($1,000)'){ window.__ccTotal = 1000; amtEl.textContent = '$1,000'; noteEl.textContent = 'Host — includes 2 tickets'; }
+    else if(host === 'Marquee Host ($2,500)'){ window.__ccTotal = 2500; amtEl.textContent = '$2,500'; noteEl.textContent = 'Marquee Host — includes 4 tickets'; }
+    else { window.__ccTotal = 'any'; amtEl.textContent = 'Any amount'; noteEl.textContent = 'Give whatever feels right'; }
+  }
+
   function imIn(e){
     e.preventDefault();
     var g = function(id){ return (document.getElementById(id).value || '').trim(); };
-    var pay = document.getElementById('f_pay').value;
+    calcTotal();
+    var totalTxt = (typeof window.__ccTotal === 'number') ? ('$' + window.__ccTotal.toLocaleString()) : (window.__ccTotal === 'any' ? 'any amount' : 'TBD');
     var n = g('f_note');
-    var fullnote = (n ? n + ' · ' : '') + 'Paying by: ' + pay;
+    var fullnote = (n ? n + ' · ' : '') + 'Signup total: ' + totalTxt;
     var params = new URLSearchParams({
       first: g('f_first'), last: g('f_last'), email: g('f_email'),
       mobile: g('f_mobile'), party: document.getElementById('f_party').value,
@@ -506,15 +515,19 @@
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: params.toString()
     });
+    var payPhrase;
+    if(typeof window.__ccTotal === 'number'){ payPhrase = 'send <b style="color:var(--gold-soft)">$' + window.__ccTotal.toLocaleString() + '</b> by Zelle or Venmo — or pay by card on the next page'; }
+    else if(window.__ccTotal === 'any'){ payPhrase = 'give any amount by Zelle, Venmo, or card'; }
+    else { payPhrase = 'complete your payment on the next page'; }
     document.getElementById('rsvpForm').innerHTML =
       '<div style="text-align:center;padding:26px 0">' +
       '<div style="font-size:44px;margin-bottom:6px">🥂</div>' +
       '<h3 style="color:var(--cream);font-size:27px;margin:0 0 10px">You\'re registered!</h3>' +
-      '<p style="color:var(--cream-dim);max-width:500px;margin:0 auto 22px;line-height:1.6">Last step — complete your payment. Paying by Zelle or Venmo? Please put <b style="color:var(--cream)">your name</b> in the memo so we can match it up.</p>' +
+      '<p style="color:var(--cream-dim);max-width:520px;margin:0 auto 22px;line-height:1.6">Last step — ' + payPhrase + '. Paying by Zelle or Venmo? Please put <b style="color:var(--cream)">your name</b> in the memo so we can match it up.</p>' +
       '<a href="pay.html" class="btn btn-gold">Complete Your Payment →</a>' +
       '<p style="color:var(--cream-dim);opacity:.7;font-size:13px;margin-top:16px">Taking you to the payment page…</p>' +
       '</div>';
-    setTimeout(function(){ window.location.href = "pay.html"; }, 2600);
+    setTimeout(function(){ window.location.href = "pay.html"; }, 3000);
   }
 
   /* ===== ADDITIONAL CONTRIBUTION — paste your Stripe custom-amount payment link
@@ -524,6 +537,7 @@
     if(!DONATE_LINK){ alert("Donations open soon — thank you for wanting to give more!"); return; }
     window.location.href = DONATE_LINK;
   }
+  calcTotal();
 </script>
 </body>
 </html>
