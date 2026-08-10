@@ -56,6 +56,16 @@
   .payinfo{max-width:600px;margin:26px auto 0;text-align:center;color:var(--cream-dim);font-size:13px;line-height:1.6;opacity:.85}
   .foot{text-align:center;color:var(--cream-dim);opacity:.7;font-size:13px;padding:24px 0 46px;letter-spacing:.02em}
   @media(max-width:600px){.tiers{grid-template-columns:1fr}}
+  .amts{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:600px;margin:0 auto}
+  .amt-chip{border:1px solid var(--line);border-radius:12px;padding:14px 22px;background:rgba(214,176,92,.05);text-align:center;min-width:118px}
+  .amt-chip .a{display:block;font-family:'Playfair Display',serif;font-size:26px;color:var(--gold-soft)}
+  .amt-chip .l{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-dim);margin-top:4px}
+  .amts-note{max-width:560px;margin:14px auto 0;text-align:center;color:var(--cream-dim);font-size:14px;line-height:1.55}
+  .stripe-links{display:flex;flex-direction:column;gap:10px;max-width:380px;margin:14px auto 0}
+  .stripe-links .btn{width:100%}
+  .whos-sub{text-align:center;color:var(--gold-soft);font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin:16px 0 10px}
+  .whos-list{max-width:640px;margin:0 auto;text-align:center;color:var(--cream-dim);font-size:15px;line-height:1.95;letter-spacing:.01em}
+  .whos-list .g{color:var(--gold-soft)}
 </style>
 </head>
 <body>
@@ -72,13 +82,23 @@
 
 <div class="wrap">
 
-  <!-- OTHER WAYS TO PAY (top, prominent) -->
-  <div class="section-label"><span class="eyebrow">Fastest way — Zelle or Venmo</span><h2>Other Ways to Pay</h2></div>
+  <!-- WHAT TO PAY -->
+  <div class="section-label"><span class="eyebrow">Choose your level</span><h2>What to Pay</h2></div>
+  <div class="amts">
+    <div class="amt-chip"><span class="a">$250</span><span class="l">Per Ticket</span></div>
+    <div class="amt-chip"><span class="a">$1,000</span><span class="l">Host</span></div>
+    <div class="amt-chip"><span class="a">$2,500</span><span class="l">Marquee Host</span></div>
+    <div class="amt-chip"><span class="a">Any</span><span class="l">Contribution</span></div>
+  </div>
+  <p class="amts-note">Tickets include admission, champagne &amp; caviar, full food &amp; lounge access, and the live auction. Hosts are named on signage &amp; the program — 2 tickets included, 4 for Marquee.</p>
+
+  <!-- PRIMARY: ZELLE / VENMO -->
+  <div class="section-label"><span class="eyebrow">The easiest way — how most guests pay</span><h2>Pay by Zelle or Venmo</h2></div>
   <div class="card feature">
-    <p class="incl">Skip the card fees — send your ticket, host, or gift payment directly by <b style="color:var(--cream)">Zelle</b> or <b style="color:var(--cream)">Venmo</b>. Please put your <b style="color:var(--cream)">name + what it's for</b> (e.g. “Top Shelf host” or “2 tickets”) in the memo so we can match it up.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:44px;justify-content:center;align-items:center;margin-top:14px">
+    <p class="incl">Send your amount directly by <b style="color:var(--cream)">Zelle</b> or <b style="color:var(--cream)">Venmo</b> — and please put your <b style="color:var(--cream)">name + what it's for</b> (e.g. “2 tickets” or “Top Shelf host”) in the memo so we can match it up.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:44px;justify-content:center;align-items:center;margin-top:16px">
       <div style="text-align:center">
-        <img src="zelle-qr.png" alt="Zelle QR code — Noel Minor" style="width:300px;max-width:80vw;border-radius:14px;background:#fff;padding:14px;box-sizing:border-box">
+        <img src="zelle-qr.png" alt="Zelle QR code — Noel Minor" style="width:320px;max-width:82vw;border-radius:14px;background:#fff;padding:14px;box-sizing:border-box">
         <div style="margin-top:12px;font-size:15px;color:var(--cream-dim);line-height:1.6">Zelle to <b style="color:var(--cream)">Noel Minor</b><br>Scan the code, or find me on Zelle at:<br><b style="color:var(--gold-soft)">noelhyun@gmail.com</b><br><b style="color:var(--gold-soft)">310-801-3161</b></div>
       </div>
       <div style="text-align:center">
@@ -88,40 +108,29 @@
     </div>
   </div>
 
-  <!-- TICKETS -->
-  <div class="section-label"><span class="eyebrow">Reserve your spot</span><h2>Tickets</h2></div>
-  <div class="card feature">
-    <div class="price">$250<small> / guest</small></div>
-    <p class="incl">Admission, champagne &amp; caviar all evening, full food &amp; lounge access, and entry to the live auction.</p>
-    <a href="https://buy.stripe.com/5kQcN54AEeMq55ad6R9bO05" class="btn btn-gold">Buy Tickets</a>
-    <p class="sub-note">Choose your number of guests at checkout</p>
-  </div>
-
-  <!-- HOSTING -->
-  <div class="section-label"><span class="eyebrow">Put your name on the night</span><h2>Become a Host</h2></div>
-  <div class="tiers">
-    <div class="tier">
-      <h4>Host</h4>
-      <div class="tp">$1,000</div>
-      <div class="tinc">Host one signature station or moment · named on signage &amp; program · 2 tickets included · recognition on social.</div>
-      <a href="https://buy.stripe.com/dRmaEX7MQawa0OUd6R9bO06" class="btn btn-gold">Become a Host</a>
-    </div>
-    <div class="tier marquee">
-      <h4>Marquee Host</h4>
-      <div class="tp">$2,500</div>
-      <div class="tinc">Host a headline experience · top billing on signage &amp; program · 4 tickets included · recognition from the mic &amp; on social · Cigars &amp; Scotch lounge.</div>
-      <a href="https://buy.stripe.com/bJebJ14AE6fU7di6It9bO07" class="btn btn-gold">Become a Marquee Host</a>
-    </div>
-  </div>
-
-  <!-- CONTRIBUTE -->
-  <div class="section-label"><span class="eyebrow">Can't attend? Still make it count</span><h2>Contribute to the Courts</h2></div>
+  <!-- SECONDARY: PAY ONLINE (STRIPE) -->
+  <div class="section-label"><span class="eyebrow">Prefer to pay online instead?</span><h2>Pay Online</h2></div>
   <div class="card">
-    <p class="incl">Chip in any amount toward bringing PlaySight cameras to ATCC — every dollar goes straight to the courts. Choose your amount at checkout.</p>
-    <a href="https://buy.stripe.com/aFacN5gjmeMqfJO9UF9bO08" class="btn btn-gold">Contribute →</a>
+    <p class="incl">You can also pay by secure bank transfer (ACH) online — pick the option that fits:</p>
+    <div class="stripe-links">
+      <a href="https://buy.stripe.com/5kQcN54AEeMq55ad6R9bO05" class="btn btn-ghost">Tickets — $250 / guest</a>
+      <a href="https://buy.stripe.com/dRmaEX7MQawa0OUd6R9bO06" class="btn btn-ghost">Host — $1,000</a>
+      <a href="https://buy.stripe.com/bJebJ14AE6fU7di6It9bO07" class="btn btn-ghost">Marquee Host — $2,500</a>
+      <a href="https://buy.stripe.com/aFacN5gjmeMqfJO9UF9bO08" class="btn btn-ghost">Contribute any amount</a>
+    </div>
+    <p class="sub-note" style="margin-top:16px">Bank transfer (ACH) may show as “pending” for a few days — that's normal.</p>
   </div>
 
-  <p class="payinfo">Card-free by design — Stripe payments are by bank transfer (ACH), so they may show as “pending” for a few days; that's normal. Zelle and Venmo are also welcome (see the top of this page). Champagne &amp; Caviar benefits the ATCC court-camera fund; contributions are not tax-deductible.</p>
+  <!-- WHO'S IN -->
+  <div class="section-label"><span class="eyebrow">You're in good company</span><h2>Who's In</h2></div>
+  <div class="card">
+    <div class="whos-sub">Our Hosts</div>
+    <p class="whos-list">The Bickerstaffes &amp; Kopoushians · The Khachis · The Azats &amp; Blacks · Joan Nguyen &amp; Brandon Tran · Noel &amp; Sky Minor · Melinda &amp; Matt Nix · Anne &amp; Phil Lee · Danny &amp; Danielle Kronfli · The Lindes · Jenn &amp; Richard Wilkinson · Christy &amp; Scott Jenstad · Christian Hart &amp; Sherie Paulson · Gary &amp; Mary Tsay · Yong Yoo &amp; Regina Cheung</p>
+    <div class="whos-sub">Also Joining Us</div>
+    <p class="whos-list">Alexis &amp; Matt Hoopes · Courtney Hazlitt · Jacqueline Zimmerman · Jennifer Lehoang · Dominique Saliano · Valiere Byrnes · Mary Grant · Darryl Bates <span class="g">…and more every day.</span></p>
+  </div>
+
+  <p class="payinfo">Champagne &amp; Caviar benefits the ATCC court-camera fund; contributions are not tax-deductible.</p>
 
 </div>
 
