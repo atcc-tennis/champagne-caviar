@@ -445,6 +445,7 @@
           </select>
         </div>
       </div>
+      <div class="field" style="margin-top:16px"><label>Add a little extra? Optional contribution ($)</label><input id="f_extra" type="number" min="0" step="5" placeholder="0" oninput="calcTotal()"></div>
       <div id="totalBox" style="text-align:center;margin:20px auto 0;padding:16px 20px;border:1px solid var(--gold);border-radius:12px;background:rgba(214,176,92,.07);max-width:380px">
         <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream-dim)">Amount to Send</div>
         <div id="totalAmt" style="font-family:'Playfair Display',serif;font-size:36px;color:var(--gold-soft);margin-top:2px;line-height:1.1">$500</div>
@@ -486,16 +487,27 @@
   function calcTotal(){
     var host = document.getElementById('f_host').value;
     var party = parseInt(document.getElementById('f_party').value, 10);
+    var extra = parseFloat(document.getElementById('f_extra').value) || 0;
     var amtEl = document.getElementById('totalAmt');
     var noteEl = document.getElementById('totalNote');
+    var base = 0, baseNote = '';
     if(host === 'Tickets'){
-      if(isNaN(party)){ amtEl.textContent = '$250 / guest'; noteEl.textContent = 'Choose your number of guests'; window.__ccTotal = 'TBD'; return; }
-      var t = party * 250; window.__ccTotal = t;
-      amtEl.textContent = '$' + t.toLocaleString();
-      noteEl.textContent = party + (party === 1 ? ' ticket' : ' tickets') + ' × $250';
-    } else if(host === 'Host ($1,000)'){ window.__ccTotal = 1000; amtEl.textContent = '$1,000'; noteEl.textContent = 'Host — includes 2 tickets'; }
-    else if(host === 'Marquee Host ($2,500)'){ window.__ccTotal = 2500; amtEl.textContent = '$2,500'; noteEl.textContent = 'Marquee Host — includes 4 tickets'; }
-    else { window.__ccTotal = 'any'; amtEl.textContent = 'Any amount'; noteEl.textContent = 'Give whatever feels right'; }
+      if(isNaN(party)){
+        if(extra > 0){ window.__ccTotal = extra; amtEl.textContent = '$' + extra.toLocaleString(); noteEl.textContent = '$' + extra.toLocaleString() + ' contribution — choose guests for tickets'; return; }
+        amtEl.textContent = '$250 / guest'; noteEl.textContent = 'Choose your number of guests'; window.__ccTotal = 'TBD'; return;
+      }
+      base = party * 250; baseNote = party + (party === 1 ? ' ticket' : ' tickets') + ' × $250';
+    } else if(host === 'Host ($1,000)'){ base = 1000; baseNote = 'Host — includes 2 tickets'; }
+    else if(host === 'Marquee Host ($2,500)'){ base = 2500; baseNote = 'Marquee Host — includes 4 tickets'; }
+    else {
+      if(extra > 0){ window.__ccTotal = extra; amtEl.textContent = '$' + extra.toLocaleString(); noteEl.textContent = 'Contribution'; }
+      else { window.__ccTotal = 'any'; amtEl.textContent = 'Any amount'; noteEl.textContent = 'Give whatever feels right'; }
+      return;
+    }
+    var total = base + extra;
+    window.__ccTotal = total;
+    amtEl.textContent = '$' + total.toLocaleString();
+    noteEl.textContent = baseNote + (extra > 0 ? ' + $' + extra.toLocaleString() + ' contribution' : '');
   }
 
   function imIn(e){
@@ -503,8 +515,9 @@
     var g = function(id){ return (document.getElementById(id).value || '').trim(); };
     calcTotal();
     var totalTxt = (typeof window.__ccTotal === 'number') ? ('$' + window.__ccTotal.toLocaleString()) : (window.__ccTotal === 'any' ? 'any amount' : 'TBD');
+    var xtra = parseFloat(document.getElementById('f_extra').value) || 0;
     var n = g('f_note');
-    var fullnote = (n ? n + ' · ' : '') + 'Signup total: ' + totalTxt;
+    var fullnote = (n ? n + ' · ' : '') + 'Signup total: ' + totalTxt + (xtra > 0 ? ' (incl. $' + xtra + ' contribution)' : '');
     var params = new URLSearchParams({
       first: g('f_first'), last: g('f_last'), email: g('f_email'),
       mobile: g('f_mobile'), party: document.getElementById('f_party').value,
