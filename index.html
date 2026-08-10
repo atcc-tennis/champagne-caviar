@@ -233,7 +233,7 @@
       <div><span class="k">Attire</span> Black Tie Optional</div>
     </div>
     <div class="cta-row">
-      <a href="pay.html" class="btn btn-gold">Buy Tickets 🥂</a>
+      <a href="#rsvp" class="btn btn-gold">Reserve Your Spot 🥂</a>
       <a href="#host" class="btn btn-ghost">Become a Host</a>
     </div>
   </div>
@@ -266,7 +266,7 @@
       <div class="hb"><span class="hb-cat">Pros &amp; Staff</span><span class="hb-title">G.O.A.T.</span><span class="hb-name">Gary &amp; Mary Tsay</span></div>
       <div class="hb"><span class="hb-cat">Dessert Table</span><span class="hb-title">Sweet Spot</span><span class="hb-name">Yong Yoo &amp; Regina Cheung</span></div>
     </div>
-    <div style="text-align:center;margin-top:34px"><a href="pay.html" class="btn btn-gold">Claim Your Host Spot</a></div>
+    <div style="text-align:center;margin-top:34px"><a href="#rsvp" class="btn btn-gold">Claim Your Host Spot</a></div>
   </div>
 </section>
 
@@ -309,8 +309,8 @@
       <div class="price">$250<small> / guest</small></div>
       <p class="incl">Admission, champagne &amp; caviar all evening, full food &amp; lounge access, and entry to the live auction.</p>
       <p style="color:var(--gold-soft);font-weight:500;font-size:14px;margin:0 0 24px">Limited tickets — this event will sell out. Grab yours early.</p>
-      <a href="pay.html" class="btn btn-gold">Buy Tickets 🥂</a>
-      <p style="margin-top:14px;font-size:13.5px;color:var(--cream-dim)">Prefer Zelle or Venmo? Those work too — see the <a href="pay.html" style="color:var(--gold-soft)">payment page</a>.</p>
+      <a href="#rsvp" class="btn btn-gold">Get Your Tickets →</a>
+      <p style="margin-top:14px;font-size:13.5px;color:var(--cream-dim)">Register first — then pay by Zelle, Venmo, or card on the next step.</p>
     </div>
   </div>
 </section>
@@ -383,8 +383,8 @@
         <div class="cat taken"><div><div class="nm">Cheese &amp; Thank You</div><span class="base">Grazing Table · savory</span><span class="hostedby">Hosted by Jenn &amp; Richard Wilkinson</span></div><span class="claimed">Claimed</span></div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:16px"><a href="pay.html" class="btn btn-gold">Become a Host →</a></div>
-    <p style="text-align:center;margin-top:12px;font-size:13.5px;color:var(--cream-dim)">Host payments can also be sent by Zelle or Venmo — details on the <a href="pay.html" style="color:var(--gold-soft)">payment page</a>.</p>
+    <div style="text-align:center;margin-top:16px"><a href="#rsvp" class="btn btn-gold">Become a Host →</a></div>
+    <p style="text-align:center;margin-top:12px;font-size:13.5px;color:var(--cream-dim)">Register first — then pay your host amount by Zelle, Venmo, or card on the next step.</p>
   </div>
 </section>
 
@@ -413,9 +413,9 @@
 <section class="rsvp" id="rsvp">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Count me in</div>
-      <h2>I'm IN!</h2>
-      <p>Tickets are on sale now — use the Buy Tickets button above to check out. Not ready just yet? Tell us you're coming and we'll keep you posted.</p>
+      <div class="eyebrow">Step 1 — Register</div>
+      <h2>Reserve Your Spot</h2>
+      <p>Register here first (it takes 30 seconds) — then you'll head straight to the payment page to pay by Zelle, Venmo, or card. This makes sure we have you on the guest list, especially if you pay by Zelle or Venmo.</p>
       <div class="rule"></div>
     </div>
     <form id="rsvpForm" onsubmit="imIn(event)">
@@ -425,29 +425,41 @@
       </div>
       <div class="two">
         <div class="field"><label>Email</label><input id="f_email" type="email" required></div>
-        <div class="field"><label>Mobile</label><input id="f_mobile" type="tel"></div>
+        <div class="field"><label>Mobile</label><input id="f_mobile" type="tel" required></div>
       </div>
       <div class="two">
         <div class="field">
-          <label>How many in your party?</label>
+          <label>How many guests? (including you)</label>
           <select id="f_party">
             <option>1</option><option selected>2</option><option>3</option><option>4</option>
             <option>5</option><option>6</option><option>8</option><option>10</option><option>Not sure yet</option>
           </select>
         </div>
         <div class="field">
-          <label>Interested in hosting a category?</label>
+          <label>I'm signing up for</label>
           <select id="f_host">
-            <option value="No, just attending">No, just attending</option>
-            <option value="Maybe — tell me more">Maybe — tell me more</option>
-            <option value="Yes — Host ($1,000)">Yes — Host ($1,000)</option>
-            <option value="Yes — Marquee Host ($2,500)">Yes — Marquee Host ($2,500)</option>
+            <option value="Tickets">Tickets ($250 / guest)</option>
+            <option value="Host ($1,000)">Host — $1,000</option>
+            <option value="Marquee Host ($2,500)">Marquee Host — $2,500</option>
+            <option value="Just contributing">Just contributing</option>
           </select>
         </div>
       </div>
-      <div class="field" style="margin-top:4px"><label>Anything you'd like us to know? (optional)</label><input id="f_note" type="text"></div>
-      <div style="text-align:center;margin-top:26px"><button class="btn btn-gold" type="submit" style="width:100%">I'm IN! 🥂</button></div>
-      <p class="note">Ready to pay now? Use the Buy Tickets or Become a Host buttons above. Champagne &amp; Caviar benefits the ATCC court-camera fund; contributions are not tax-deductible.</p>
+      <div class="two">
+        <div class="field">
+          <label>How will you pay?</label>
+          <select id="f_pay">
+            <option value="Zelle">Zelle</option>
+            <option value="Venmo">Venmo</option>
+            <option value="Card">Card</option>
+            <option value="Bank transfer (ACH)">Bank transfer (ACH)</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </div>
+        <div class="field"><label>Anything you'd like us to know? (optional)</label><input id="f_note" type="text"></div>
+      </div>
+      <div style="text-align:center;margin-top:26px"><button class="btn btn-gold" type="submit" style="width:100%">Reserve &amp; Continue to Payment →</button></div>
+      <p class="note">Next step: choose Zelle, Venmo, or card on the payment page. Champagne &amp; Caviar benefits the ATCC court-camera fund; contributions are not tax-deductible.</p>
     </form>
   </div>
 </section>
@@ -481,10 +493,13 @@
   function imIn(e){
     e.preventDefault();
     var g = function(id){ return (document.getElementById(id).value || '').trim(); };
+    var pay = document.getElementById('f_pay').value;
+    var n = g('f_note');
+    var fullnote = (n ? n + ' · ' : '') + 'Paying by: ' + pay;
     var params = new URLSearchParams({
       first: g('f_first'), last: g('f_last'), email: g('f_email'),
       mobile: g('f_mobile'), party: document.getElementById('f_party').value,
-      host: document.getElementById('f_host').value, note: g('f_note')
+      host: document.getElementById('f_host').value, note: fullnote
     });
     fetch("https://script.google.com/macros/s/AKfycbzeChf_cnhZDC5pKA0Vp8MfeRhTMIL4RaLYgjW4BytDvqLpCw92j8AuMSSgr9X4PSYjdg/exec", {
       method: "POST", mode: "no-cors",
@@ -494,9 +509,12 @@
     document.getElementById('rsvpForm').innerHTML =
       '<div style="text-align:center;padding:26px 0">' +
       '<div style="font-size:44px;margin-bottom:6px">🥂</div>' +
-      '<h3 style="color:var(--cream);font-size:27px;margin:0 0 12px">You\'re on the list!</h3>' +
-      '<p style="color:var(--cream-dim);max-width:490px;margin:0 auto;line-height:1.6">You\'re counted in. When tickets go on sale, we\'ll invite you right back here to grab yours and process payment. See you on the 19th!</p>' +
+      '<h3 style="color:var(--cream);font-size:27px;margin:0 0 10px">You\'re registered!</h3>' +
+      '<p style="color:var(--cream-dim);max-width:500px;margin:0 auto 22px;line-height:1.6">Last step — complete your payment. Paying by Zelle or Venmo? Please put <b style="color:var(--cream)">your name</b> in the memo so we can match it up.</p>' +
+      '<a href="pay.html" class="btn btn-gold">Complete Your Payment →</a>' +
+      '<p style="color:var(--cream-dim);opacity:.7;font-size:13px;margin-top:16px">Taking you to the payment page…</p>' +
       '</div>';
+    setTimeout(function(){ window.location.href = "pay.html"; }, 2600);
   }
 
   /* ===== ADDITIONAL CONTRIBUTION — paste your Stripe custom-amount payment link
