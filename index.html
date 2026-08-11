@@ -528,6 +528,12 @@
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: params.toString()
     });
+    var payParams = new URLSearchParams();
+    if(typeof window.__ccTotal === 'number'){ payParams.set('amt', window.__ccTotal); }
+    payParams.set('party', document.getElementById('f_party').value);
+    payParams.set('for', document.getElementById('f_host').value);
+    if(g('f_first')){ payParams.set('name', g('f_first')); }
+    var payUrl = 'pay.html?' + payParams.toString();
     var payPhrase;
     if(typeof window.__ccTotal === 'number'){ payPhrase = 'send <b style="color:var(--gold-soft)">$' + window.__ccTotal.toLocaleString() + '</b> by Zelle or Venmo — or pay by card on the next page'; }
     else if(window.__ccTotal === 'any'){ payPhrase = 'give any amount by Zelle, Venmo, or card'; }
@@ -537,10 +543,10 @@
       '<div style="font-size:44px;margin-bottom:6px">🥂</div>' +
       '<h3 style="color:var(--cream);font-size:27px;margin:0 0 10px">You\'re registered!</h3>' +
       '<p style="color:var(--cream-dim);max-width:520px;margin:0 auto 22px;line-height:1.6">Last step — ' + payPhrase + '. Paying by Zelle or Venmo? Please put <b style="color:var(--cream)">your name</b> in the memo so we can match it up.</p>' +
-      '<a href="pay.html" class="btn btn-gold">Complete Your Payment →</a>' +
+      '<a href="' + payUrl + '" class="btn btn-gold">Complete Your Payment →</a>' +
       '<p style="color:var(--cream-dim);opacity:.7;font-size:13px;margin-top:16px">Taking you to the payment page…</p>' +
       '</div>';
-    setTimeout(function(){ window.location.href = "pay.html"; }, 3000);
+    setTimeout(function(){ window.location.href = payUrl; }, 3000);
   }
 
   /* ===== ADDITIONAL CONTRIBUTION — paste your Stripe custom-amount payment link
