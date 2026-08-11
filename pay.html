@@ -88,6 +88,7 @@
     <div id="ytAmt" style="font-family:'Playfair Display',serif;font-size:46px;color:var(--gold-soft);line-height:1.1;margin-top:4px">$500</div>
     <div id="ytNote" style="font-size:14px;color:var(--cream-dim);margin-top:4px">2 tickets</div>
     <div id="ytSend" style="font-size:14px;color:var(--cream);margin-top:12px">Please send <b>this exact amount</b> — and put your name in the memo so we can match it.</div>
+    <a id="ytCard" href="#" class="btn btn-gold" style="display:none;margin-top:16px">Pay by card or bank →</a>
   </div>
 
   <!-- PRIMARY: ZELLE / VENMO -->
@@ -149,6 +150,14 @@
   else { note = 'Your contribution'; }
   document.getElementById('ytNote').textContent = note;
   if(name){ document.getElementById('ytSend').innerHTML = 'Thanks, ' + name.replace(/[<>]/g, '') + ' — please send <b>this exact amount</b>, and put your name in the memo so we can match it.'; }
+  var payLink = null;
+  if(fr && fr.indexOf('Marquee') !== -1){ payLink = 'https://buy.stripe.com/bJebJ14AE6fU7di6It9bO07'; }
+  else if(fr && fr.indexOf('Host') !== -1){ payLink = 'https://buy.stripe.com/dRmaEX7MQawa0OUd6R9bO06'; }
+  else if(fr && fr.indexOf('Tickets') !== -1){
+    var tmap = {250:'https://buy.stripe.com/5kQcN54AEeMq55ad6R9bO05',500:'https://buy.stripe.com/aFa5kD4AEgUy4164Al9bO09',750:'https://buy.stripe.com/8x2cN50kofQu2X20k59bO0a',1000:'https://buy.stripe.com/00w6oHaZ20VA9lq2sd9bO0b'};
+    if(tmap[n]) payLink = tmap[n];
+  }
+  if(payLink){ var cbtn = document.getElementById('ytCard'); cbtn.href = payLink; cbtn.textContent = 'Pay $' + n.toLocaleString() + ' by card or bank →'; cbtn.style.display = 'inline-block'; }
   document.getElementById('yourTotal').style.display = 'block';
 })();
 </script>
