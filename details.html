@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Finer Details — Champagne &amp; Caviar · ATCC</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--gold:#d6b05c;--gold-soft:#f0dca2;--cream:#f8f2e6;--cream-dim:#ded6c4;--blush:#e0a184;--line:rgba(214,176,92,.32);--ink2:#2e281f}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:linear-gradient(180deg,#2a231b 0%,#1e1912 55%,#262018 100%);background-attachment:fixed;color:var(--cream);font-family:'Jost',sans-serif;font-weight:300;font-size:18px;line-height:1.7;letter-spacing:.2px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:600;letter-spacing:.3px;line-height:1.18}
+  a{color:inherit}
+  .wrap{max-width:840px;margin:0 auto;padding:0 26px}
+  .eyebrow{font-family:'Jost',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.42em;font-size:12px;color:var(--gold)}
+  .btn{display:inline-block;cursor:pointer;border:none;font-family:'Jost',sans-serif;font-weight:500;letter-spacing:.16em;text-transform:uppercase;font-size:14px;padding:15px 34px;border-radius:2px;transition:.25s;text-decoration:none}
+  .btn-gold{background:linear-gradient(180deg,var(--gold-soft),var(--gold));color:#221a06}
+  .btn-gold:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--cream-dim);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-soft)}
+  .topbar{text-align:center;padding:24px 0 0}
+  .topbar a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-dim);text-decoration:none}
+  .topbar a:hover{color:var(--gold-soft)}
+  .head{text-align:center;padding:40px 0 10px}
+  .flute{font-size:32px}
+  .eyebrow-top{margin-top:6px}
+  .script{font-family:'Great Vibes',cursive;font-weight:400;color:var(--cream);font-size:clamp(46px,8vw,80px);line-height:.95;margin:6px 0 4px}
+  .lede{font-size:18px;color:var(--cream-dim);max-width:600px;margin:16px auto 0;line-height:1.65}
+  .rule{width:64px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:28px auto}
+
+  .section-label{text-align:center;margin:40px auto 20px}
+  .section-label .eyebrow{display:block}
+  .section-label h2{font-size:clamp(24px,4vw,30px);color:var(--cream);margin-top:6px}
+
+  .know{max-width:640px;margin:0 auto;border:1px solid var(--gold);border-radius:14px;padding:8px 32px;background:linear-gradient(180deg,rgba(214,176,92,.08),rgba(46,40,31,.5));box-shadow:0 20px 54px -34px rgba(214,176,92,.6)}
+  .know .row{display:flex;gap:20px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line)}
+  .know .row:last-child{border-bottom:none}
+  .know .k{flex:0 0 128px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);padding-top:3px}
+  .know .v{flex:1;color:var(--cream);font-size:16.5px;line-height:1.55}
+  .know .v b{color:var(--cream);font-weight:500}
+  .know .v small{display:block;color:var(--cream-dim);font-size:14px;margin-top:3px}
+  .know .v a{color:var(--gold-soft);text-decoration:none;border-bottom:1px solid var(--line)}
+
+  .card{border:1px solid var(--line);border-radius:14px;padding:30px 30px;background:linear-gradient(180deg,rgba(214,176,92,.05),rgba(46,40,31,.5));margin:0 auto 22px;max-width:640px}
+  .tier-label{text-align:center;color:var(--gold-soft);font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin:0 0 16px}
+  .hb-list{display:grid;gap:12px}
+  .hb{display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:baseline;border-bottom:1px dotted var(--line);padding-bottom:11px}
+  .hb:last-child{border-bottom:none;padding-bottom:0}
+  .hb-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--gold-soft)}
+  .hb-cat{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blush);margin-top:2px}
+  .hb-name{text-align:right;color:var(--cream);font-size:15px;line-height:1.4}
+
+  .whos-list{max-width:660px;margin:0 auto;text-align:center;color:var(--cream-dim);font-size:16px;line-height:2;letter-spacing:.01em}
+  .whos-list .g{color:var(--gold-soft)}
+  .note{max-width:600px;margin:8px auto 0;text-align:center;color:var(--cream-dim);font-size:13.5px;line-height:1.6;opacity:.9}
+
+  .cta{text-align:center;padding:38px 0 16px}
+  .foot{text-align:center;color:var(--cream-dim);opacity:.7;font-size:13px;padding:20px 0 46px;letter-spacing:.02em}
+</style>
+</head>
+<body>
+
+<style>
+  .snav{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 6px;padding:18px 14px 10px;border-bottom:1px solid rgba(214,176,92,.22)}
+  .snav a{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#ded6c4;text-decoration:none;padding:8px 15px;border-radius:2px;transition:.2s;white-space:nowrap}
+  .snav a:hover{color:#f0dca2}
+  .snav a.active{color:#221a06;background:linear-gradient(180deg,#f0dca2,#d6b05c)}
+</style>
+<nav class="snav">
+  <a href="index.html">Reserve</a>
+  <a href="vision.html">Vision</a>
+  <a href="whos-in.html">Who's In</a>
+  <a href="auction-items.html">Auction</a>
+  <a href="details.html" class="active">Details</a>
+</nav>
+
+<div class="head">
+  <div class="flute">🥂</div>
+  <div class="eyebrow eyebrow-top">Champagne &amp; Caviar · September 19</div>
+  <div class="script">The Finer Details</div>
+  <p class="lede">Everything you need to know for the evening.</p>
+  <div class="rule"></div>
+</div>
+
+<div class="wrap">
+
+  <!-- WHAT YOU NEED TO KNOW -->
+  <div class="section-label"><span class="eyebrow">Before you come</span><h2>What You Need to Know</h2></div>
+  <div class="know">
+    <div class="row"><div class="k">When</div><div class="v"><b>Saturday, September 19, 2026</b><small>6:00 PM until late</small></div></div>
+    <div class="row"><div class="k">Where</div><div class="v"><b>2835 N Holliston Ave, Altadena, CA 91001</b><small><a href="https://maps.google.com/?q=2835+N+Holliston+Ave+Altadena+CA+91001" target="_blank" rel="noopener">Open in Maps →</a></small></div></div>
+    <div class="row"><div class="k">Dress Code</div><div class="v"><b>Black Tie Optional</b></div></div>
+    <div class="row"><div class="k">Getting There</div><div class="v">We encourage ride-sharing.<small>Uber or Lyft recommended.</small></div></div>
+    <div class="row"><div class="k">The Evening</div><div class="v">Caviar stations, a wood-fired pizza &amp; pasta bar, open bar, DJ &amp; dancing, the Havana Nights cigar lounge, and a live auction.</div></div>
+    <div class="row"><div class="k">Good to Know</div><div class="v">This is <b>not an ATCC-organized event</b> — it's an informal group of friends gathering socially. Profits from the evening will be gifted to ATCC for its intended use toward court cameras.<small>Contributions are not tax-deductible.</small></div></div>
+  </div>
+
+  <!-- HOSTS -->
+  <div class="section-label"><span class="eyebrow">With gratitude to</span><h2>Our Hosts</h2></div>
+  <div class="card">
+    <div class="tier-label">Marquee Hosts</div>
+    <div class="hb-list">
+      <div class="hb"><div><span class="hb-title">Havana Nights</span><span class="hb-cat">Cigar Lounge</span></div><span class="hb-name">Sad Man Tennis Club</span></div>
+      <div class="hb"><div><span class="hb-title">Serve &amp; Sparkle</span><span class="hb-cat">Champagne</span></div><span class="hb-name">Jackie Yi &amp; Danny Bickerstaffe<br>Yvette &amp; Ara Kopoushian</span></div>
+      <div class="hb"><div><span class="hb-title">Top Shelf</span><span class="hb-cat">The Bar</span></div><span class="hb-name">Steve &amp; Cynthia Khachi</span></div>
+      <div class="hb"><div><span class="hb-title">Strike a Pose</span><span class="hb-cat">Décor &amp; Photobooth</span></div><span class="hb-name">Alex &amp; Issa Azat<br>Neda &amp; David Black</span></div>
+      <div class="hb"><div><span class="hb-title">Caviar Court</span><span class="hb-cat">Caviar</span></div><span class="hb-name">Joan Nguyen &amp; Brandon Tran</span></div>
+      <div class="hb"><div><span class="hb-title">Ice Ice Baby</span><span class="hb-cat">Ice Luge</span></div><span class="hb-name">Noel &amp; Sky Minor</span></div>
+      <div class="hb"><div><span class="hb-title">The Munchie Lounge</span><span class="hb-cat">Late-Night</span></div><span class="hb-name">Melinda &amp; Matt Nix</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="tier-label">Hosts</div>
+    <div class="hb-list">
+      <div class="hb"><div><span class="hb-title">Aces of Bass</span><span class="hb-cat">DJ</span></div><span class="hb-name">Anne &amp; Phil Lee</span></div>
+      <div class="hb"><div><span class="hb-title">Spin Doctors</span><span class="hb-cat">DJ</span></div><span class="hb-name">Mary &amp; Doug Grant</span></div>
+      <div class="hb"><div><span class="hb-title">Neat Freaks</span><span class="hb-cat">Scotch</span></div><span class="hb-name">Danny &amp; Danielle Kronfli</span></div>
+      <div class="hb"><div><span class="hb-title">Shot Callers</span><span class="hb-cat">Shots</span></div><span class="hb-name">Leslie Croyder-Linde</span></div>
+      <div class="hb"><div><span class="hb-title">Cheese &amp; Thank You</span><span class="hb-cat">Grazing Table</span></div><span class="hb-name">Jenn &amp; Richard Wilkinson</span></div>
+      <div class="hb"><div><span class="hb-title">Sweet Spot</span><span class="hb-cat">Dessert Table</span></div><span class="hb-name">Yong Yoo &amp; Regina Cheung</span></div>
+      <div class="hb"><div><span class="hb-title">Slice Slice Baby</span><span class="hb-cat">Pizza</span></div><span class="hb-name">Christy &amp; Scott Jenstad</span></div>
+      <div class="hb"><div><span class="hb-title">Ground Crew</span><span class="hb-cat">Event Support</span></div><span class="hb-name">Christian Hart &amp; Sherie Paulson</span></div>
+      <div class="hb"><div><span class="hb-title">G.O.A.T.</span><span class="hb-cat">Pros &amp; Staff</span></div><span class="hb-name">Mary Chou &amp; Gary Tsay</span></div>
+      <div class="hb"><div><span class="hb-title">Line Judges</span><span class="hb-cat">Event Support</span></div><span class="hb-name">Rebecca &amp; Peter Stokes</span></div>
+    </div>
+  </div>
+
+  <div class="cta" style="padding-top:30px"><a href="whos-in.html" class="btn btn-ghost">See who's already in →</a></div>
+
+</div>
+
+<div class="cta">
+  <a href="index.html#tickets" class="btn btn-gold">Buy Tickets 🥂</a>
+</div>
+
+<div class="foot">An informal gathering of friends · profits gifted to the Altadena Town &amp; Country Club for court cameras · September 19</div>
+
+</body>
+</html>

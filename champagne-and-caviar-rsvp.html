@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Champagne &amp; Caviar — An ATCC Courtside Benefit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#211c16;
+    --ink2:#2e281f;
+    --gold:#d6b05c;
+    --gold-soft:#f0dca2;
+    --cream:#f8f2e6;
+    --cream-dim:#ded6c4;
+    --blush:#e0a184;
+    --line:rgba(214,176,92,.32);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:linear-gradient(180deg,#2a231b 0%, #1e1912 55%, #262018 100%);
+    background-attachment:fixed;
+    color:var(--cream);
+    font-family:'Jost',sans-serif;
+    font-weight:300;
+    font-size:18px;
+    line-height:1.72;
+    letter-spacing:.2px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:600;letter-spacing:.3px;line-height:1.15}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 26px}
+  .eyebrow{
+    font-family:'Jost',sans-serif;font-weight:500;text-transform:uppercase;
+    letter-spacing:.42em;font-size:12px;color:var(--gold);
+  }
+  .btn{
+    display:inline-block;cursor:pointer;border:none;
+    font-family:'Jost',sans-serif;font-weight:500;letter-spacing:.16em;
+    text-transform:uppercase;font-size:14px;
+    padding:16px 32px;border-radius:2px;transition:.25s;text-decoration:none;
+  }
+  .btn-gold{background:linear-gradient(180deg,var(--gold-soft),var(--gold));color:#221a06}
+  .btn-gold:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--cream);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-soft)}
+
+  /* HERO */
+  .hero{
+    position:relative;text-align:center;
+    padding:96px 0 84px;
+    background:
+      radial-gradient(100% 70% at 50% -6%, rgba(224,161,132,.16), transparent 55%),
+      radial-gradient(130% 95% at 50% 2%, rgba(214,176,92,.20), transparent 62%),
+      linear-gradient(180deg,#332a20 0%, #221c14 100%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero .flute{font-size:34px;letter-spacing:.3em;margin-bottom:20px}
+  .hero h1{font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(66px,13vw,140px);line-height:1.0;margin:6px 0 4px;color:var(--cream)}
+  .hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .hero .amp{display:block;font-size:.62em;color:var(--gold);margin:-10px 0 -6px}
+  .hero .sub{font-size:19px;color:var(--cream);max-width:620px;margin:16px auto 0;font-weight:300}
+  .hero .urgent{color:var(--gold-soft);font-weight:500;letter-spacing:.03em;font-size:15px;margin:14px auto 0;max-width:600px}
+  .meta{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px;
+    margin:34px 0 36px;font-size:16.5px;color:var(--cream);
+  }
+  .meta div{display:flex;align-items:center;gap:9px}
+  .meta .k{color:var(--gold);font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  /* SECTIONS */
+  section{padding:74px 0;border-bottom:1px solid rgba(201,164,76,.14)}
+  .section-head{text-align:center;max-width:680px;margin:0 auto 44px}
+  .section-head h2{font-size:clamp(33px,5.4vw,48px);margin:12px 0 16px}
+  .section-head p{color:var(--cream-dim);font-size:19px;line-height:1.7}
+  .rule{width:72px;height:2px;background:linear-gradient(90deg,var(--blush),var(--gold));margin:20px auto 0;opacity:.9;border-radius:2px}
+
+  /* CAUSE */
+  .cause{
+    background:linear-gradient(180deg,#241e17,#1b1610);
+  }
+  .cause-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .cause-card{
+    background:var(--ink2);border:1px solid var(--line);border-radius:6px;
+    padding:34px;
+  }
+  .cause-card h3{font-size:24px;color:var(--gold-soft);margin-bottom:12px}
+  .cause-list{list-style:none;margin-top:16px}
+  .cause-list li{padding:9px 0 9px 26px;position:relative;color:var(--cream);border-top:1px solid rgba(201,164,76,.12)}
+  .cause-list li:before{content:"◆";position:absolute;left:0;color:var(--gold);font-size:11px;top:12px}
+
+  /* EVENING marquee of delights */
+  .delights{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:840px;margin:0 auto}
+  .chip{
+    border:1px solid var(--line);border-radius:30px;padding:11px 22px;
+    font-size:15.5px;color:var(--cream);letter-spacing:.1em;
+    background:rgba(214,176,92,.06);
+  }
+  .chip span{color:var(--blush)}
+
+  /* TICKETS */
+  .tickets-inner{max-width:560px;margin:0 auto;text-align:center}
+  .ticket-card{
+    background:linear-gradient(180deg,#2c251b,#1f1913);
+    border:1px solid var(--gold);border-radius:8px;padding:44px 38px;
+    box-shadow:0 24px 60px -30px rgba(201,164,76,.5);
+  }
+  .ticket-card .price{font-family:'Playfair Display',serif;font-size:62px;color:var(--gold-soft)}
+  .ticket-card .price small{font-size:20px;color:var(--cream-dim);font-weight:300}
+  .ticket-card .incl{color:var(--cream-dim);margin:14px 0 22px;font-size:16.5px}
+
+  /* HOSTS */
+  .tiers{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-bottom:40px}
+  .tier{
+    background:var(--ink2);border:1px solid var(--line);border-radius:8px;padding:32px;position:relative;
+  }
+  .tier.marquee{border-color:var(--gold);background:linear-gradient(180deg,#2c251b,#1f1913)}
+  .tier .tag{
+    position:absolute;top:-12px;left:32px;background:var(--gold);color:#221a06;
+    font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:5px 14px;border-radius:2px;
+  }
+  .tier h3{font-size:26px;margin-bottom:4px}
+  .tier .tp{font-family:'Playfair Display',serif;font-size:40px;color:var(--gold-soft);margin:6px 0}
+  .tier .tp small{font-size:16px;color:var(--cream-dim)}
+  .tier .slots{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  .tier ul{list-style:none}
+  .tier ul li{padding:8px 0 8px 24px;position:relative;font-size:16.5px;color:var(--cream)}
+  .tier ul li:before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:12px;top:9px}
+
+  .cats-head{text-align:center;margin:6px 0 22px}
+  .cats-head h3{font-size:26px;color:var(--gold-soft)}
+  .cats-head p{color:var(--cream-dim);font-size:15px;margin-top:6px}
+  .cats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .cat{
+    display:flex;gap:16px;align-items:baseline;
+    background:rgba(255,255,255,.015);border:1px solid rgba(201,164,76,.16);
+    border-radius:6px;padding:16px 18px;
+  }
+  .cat .nm{font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);font-weight:600}
+  .cat .base{display:block;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:4px}
+  .cat .lvl{margin-left:auto;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-dim);white-space:nowrap;padding-top:3px}
+  .cat.m{border-color:var(--gold);background:rgba(201,164,76,.06)}
+  .cat.taken{opacity:.66}
+  .cat .hostedby{display:block;font-size:12px;color:var(--gold-soft);margin-top:5px;letter-spacing:.02em;text-transform:none;font-family:'Jost',sans-serif;font-weight:400}
+  .cat .claimed{margin-left:auto;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);border-radius:20px;padding:3px 10px;white-space:nowrap;align-self:flex-start}
+  .hb-list{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:920px;margin:0 auto}
+  .hb{border:1px solid var(--gold);border-radius:12px;padding:26px 36px;background:linear-gradient(180deg,rgba(214,176,92,.12),rgba(46,40,31,.6));text-align:center;min-width:300px;box-shadow:0 18px 44px -28px rgba(214,176,92,.6)}
+  .hb-cat{display:block;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--blush);margin-bottom:8px}
+  .hb-title{display:block;font-family:'Playfair Display',serif;font-size:28px;color:var(--gold-soft);margin-bottom:10px;line-height:1.15}
+  .hb-name{font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);font-weight:600}
+  .cat-group{margin-bottom:34px}
+  .group-label{text-align:center;margin:0 0 18px}
+  .group-label .amt{font-family:'Playfair Display',serif;font-size:26px;color:var(--gold-soft)}
+  .group-label .lab{display:block;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-top:4px}
+
+  /* AUCTION */
+  .auction{background:linear-gradient(180deg,#241e17,#1b1610)}
+  .auc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .auc{
+    text-align:center;border:1px solid var(--line);border-radius:8px;padding:34px 24px;
+    background:var(--ink2);
+  }
+  .auc .ico{font-size:30px;margin-bottom:14px;display:block}
+  .auc h4{font-size:22px;color:var(--gold-soft);margin-bottom:8px}
+  .auc p{color:var(--cream-dim);font-size:16.5px}
+
+  /* RSVP FORM */
+  .rsvp{background:linear-gradient(180deg,#241e17,#1a150f)}
+  form{max-width:640px;margin:0 auto;background:var(--ink2);border:1px solid var(--line);border-radius:10px;padding:40px}
+  .field{margin-bottom:20px}
+  label{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  input,select{
+    width:100%;background:#1a150f;border:1px solid var(--line);border-radius:4px;
+    padding:13px 15px;color:var(--cream);font-family:'Jost',sans-serif;font-size:15px;
+  }
+  input:focus,select:focus{outline:none;border-color:var(--gold)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .total-line{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-top:1px solid var(--line);margin-top:8px;padding-top:20px;
+  }
+  .total-line .lbl{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-dim)}
+  .total-line .amt{font-family:'Playfair Display',serif;font-size:38px;color:var(--gold-soft)}
+  .note{font-size:12.5px;color:var(--cream-dim);text-align:center;margin-top:16px;font-style:italic}
+
+  footer{padding:50px 0 60px;text-align:center;color:var(--cream-dim);font-size:14px}
+  footer .fl{font-family:'Playfair Display',serif;font-size:22px;color:var(--gold-soft);margin-bottom:10px}
+  footer a{color:var(--gold)}
+
+  @media(max-width:760px){
+    .cause-grid,.tiers,.cats,.auc-grid,.two{grid-template-columns:1fr}
+    section{padding:56px 0}
+    .hero{padding:70px 0 60px}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="flute">🥂</div>
+    <div class="eyebrow">A benefit for the Altadena Town &amp; Country Club</div>
+    <h1>Champagne<span class="amp">&amp;</span>Caviar</h1>
+    <p class="sub">Champagne, caviar, and a little mischief — to put recording cameras on our courts.</p>
+    <p class="urgent">Tickets are limited and this event will sell out — reserve yours now.</p>
+    <div class="meta">
+      <div><span class="k">When</span> Saturday, September 19 · 6:30 PM</div>
+      <div><span class="k">Where</span> Home of Melinda &amp; Matt Nix</div>
+      <div><span class="k">Attire</span> Black Tie Optional</div>
+    </div>
+    <div class="cta-row">
+      <a href="#rsvp" class="btn btn-gold">Reserve Your Tickets</a>
+      <a href="#host" class="btn btn-ghost">Become a Host</a>
+    </div>
+  </div>
+</header>
+
+<!-- HOSTED BY -->
+<section>
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:26px">
+      <div class="eyebrow">With gratitude to our hosts</div>
+      <h2>Hosted By</h2>
+    </div>
+    <div class="hb-list">
+      <div class="hb"><span class="hb-cat">Caviar</span><span class="hb-title">Caviar Court</span><span class="hb-name">Joan Nguyen &amp; Brandon Tran</span></div>
+      <div class="hb"><span class="hb-cat">Ice Luge</span><span class="hb-title">Ice Ice Baby</span><span class="hb-name">Noel &amp; Sky Minor</span></div>
+    </div>
+    <div style="text-align:center;margin-top:34px"><a href="#host" class="btn btn-gold">Claim Your Host Spot</a></div>
+  </div>
+</section>
+
+<!-- CAUSE -->
+<section class="cause">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The reason we're raising a glass</div>
+      <h2>Every point, on the record.</h2>
+      <p>Proceeds bring court-recording cameras to ATCC — capturing every match and rally so members and pros can review play, sharpen technique, and train smarter. One unforgettable night; a lasting upgrade for everyone who steps on court.</p>
+      <div class="rule"></div>
+    </div>
+    <div class="cause-grid">
+      <div class="cause-card">
+        <h3>What your night funds</h3>
+        <ul class="cause-list">
+          <li>Courtside cameras that record play, automatically</li>
+          <li>Instant match &amp; rally replay for members</li>
+          <li>Film-review support for lessons and clinics</li>
+          <li>A training edge for juniors, adults, and teams alike</li>
+        </ul>
+      </div>
+      <div class="cause-card">
+        <h3>Why it matters</h3>
+        <p>The best players in the world study the tape. With cameras on our courts, every ATCC member gets that same advantage — see your game the way your pro sees it, and watch your progress point by point. Your ticket and your hosting turn a great party into a permanent home-court upgrade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKETS -->
+<section>
+  <div class="wrap tickets-inner">
+    <div class="section-head" style="margin-bottom:30px">
+      <div class="eyebrow">Reserve your spot</div>
+      <h2>Tickets</h2>
+    </div>
+    <div class="ticket-card">
+      <div class="price">$250<small> / guest</small></div>
+      <p class="incl">Admission, champagne &amp; caviar all evening, full food &amp; lounge access, and entry to the live auction.</p>
+      <p style="color:var(--gold-soft);font-weight:500;font-size:14px;margin:0 0 24px">Limited tickets — this event will sell out. Grab yours early.</p>
+      <a href="#rsvp" class="btn btn-gold">Reserve Tickets</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOSTS -->
+<section id="host">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Put your name on the night</div>
+      <h2>Become a Host</h2>
+      <p>Underwrite one of the evening's signature experiences and be celebrated as its host — on the signage, in the program, and all night long. Two levels, one great cause.</p>
+      <div class="rule"></div>
+    </div>
+
+    <div class="tiers">
+      <div class="tier marquee">
+        <h3>Marquee Host</h3>
+        <div class="tp">$2,500<small> / host</small></div>
+        <ul>
+          <li>Host of a headline experience (the pours &amp; the party)</li>
+          <li>Top billing on event signage &amp; program</li>
+          <li>4 event tickets included</li>
+          <li>Recognition from the mic &amp; on social</li>
+          <li>Reserved space in the Cigars &amp; Scotch lounge</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <h3>Host</h3>
+        <div class="tp">$1,000<small> / host</small></div>
+        <ul>
+          <li>Host of one signature station or moment</li>
+          <li>Named on event signage &amp; program</li>
+          <li>2 event tickets included</li>
+          <li>Recognition on social</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cats-head">
+      <h3>Choose your character</h3>
+      <p>Pick the experience you'd like to host — each comes with its own title for the night.</p>
+    </div>
+
+    <div class="cat-group">
+      <div class="group-label"><span class="amt">$2,500</span><span class="lab">Marquee Hosts</span></div>
+      <div class="cats">
+        <div class="cat m"><div><div class="nm">Serve &amp; Sparkle</div><span class="base">Champagne</span></div></div>
+        <div class="cat m"><div><div class="nm">Top Shelf</div><span class="base">The Bar</span></div></div>
+        <div class="cat m taken"><div><div class="nm">Caviar Court</div><span class="base">Caviar</span><span class="hostedby">Hosted by Joan Nguyen &amp; Brandon Tran</span></div><span class="claimed">Claimed</span></div>
+        <div class="cat m taken"><div><div class="nm">Ice Ice Baby</div><span class="base">Ice Luge</span><span class="hostedby">Hosted by Noel &amp; Sky Minor</span></div><span class="claimed">Claimed</span></div>
+        <div class="cat m"><div><div class="nm">Strike a Pose</div><span class="base">Décor &amp; Photobooth</span></div></div>
+        <div class="cat m"><div><div class="nm">The Munchie Lounge</div><span class="base">Munchies &amp; late-night snacks</span></div></div>
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="group-label"><span class="amt">$1,000</span><span class="lab">Hosts</span></div>
+      <div class="cats">
+        <div class="cat"><div><div class="nm">Aces of Bass</div><span class="base">DJ</span></div></div>
+        <div class="cat"><div><div class="nm">Spin Doctors</div><span class="base">DJ</span></div></div>
+        <div class="cat"><div><div class="nm">Havana Nights</div><span class="base">Cigars</span></div></div>
+        <div class="cat"><div><div class="nm">Neat Freaks</div><span class="base">Scotch</span></div></div>
+        <div class="cat"><div><div class="nm">Shot Callers</div><span class="base">Shots</span></div></div>
+        <div class="cat"><div><div class="nm">Cheese &amp; Thank You</div><span class="base">Grazing Table · savory</span></div></div>
+        <div class="cat"><div><div class="nm">Sweet Spot</div><span class="base">Dessert Table</span></div></div>
+        <div class="cat"><div><div class="nm">Slice Slice Baby</div><span class="base">Pizza</span></div></div>
+        <div class="cat"><div><div class="nm">Pasta La Vista</div><span class="base">Pasta</span></div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:16px"><a href="#rsvp" class="btn btn-gold">Claim a Host Spot</a></div>
+  </div>
+</section>
+
+<!-- AUCTION -->
+<section class="auction">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Paddles up</div>
+      <h2>The Live Auction</h2>
+      <p>Bid on once-in-a-while experiences — with every dollar going straight to the courts.</p>
+      <div class="rule"></div>
+    </div>
+    <div class="auc-grid">
+      <div class="auc"><span class="ico">🌴</span><h4>Escape in Style</h4><p>Vacation stays at exclusive, hard-to-book destinations.</p></div>
+      <div class="auc"><span class="ico">🎾</span><h4>Private Live-Ball Parties</h4><p>Book the pros for your own courtside bash with friends.</p></div>
+      <div class="auc"><span class="ico">🏟️</span><h4>Best Seats in the House</h4><p>Tickets to marquee sporting events you won't want to miss.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:38px">
+      <p style="color:var(--cream-dim);font-size:16px;margin-bottom:18px">Have something worth bidding on? Donate an item or experience to the auction.</p>
+      <a href="mailto:noel.atcc@gmail.com,melindastahl@sbcglobal.net?subject=Auction%20Item%20Donation%20—%20Champagne%20%26%20Caviar" class="btn btn-ghost">Donate an Auction Item</a>
+    </div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section class="rsvp" id="rsvp">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">RSVP &amp; checkout</div>
+      <h2>Save your spot</h2>
+      <p>Reserve tickets, claim a host spot, or both. We'll see you on the 19th.</p>
+      <div class="rule"></div>
+    </div>
+    <form onsubmit="checkout(event)">
+      <div class="two">
+        <div class="field"><label>First name</label><input type="text" required></div>
+        <div class="field"><label>Last name</label><input type="text" required></div>
+      </div>
+      <div class="two">
+        <div class="field"><label>Email</label><input type="email" required></div>
+        <div class="field"><label>Mobile</label><input type="tel"></div>
+      </div>
+      <div class="two">
+        <div class="field">
+          <label>Tickets ($250 each)</label>
+          <select id="tix" onchange="calc()">
+            <option value="0">0</option><option value="1">1</option><option value="2" selected>2</option>
+            <option value="3">3</option><option value="4">4</option><option value="6">6</option>
+            <option value="8">8</option><option value="10">10</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Host a category (optional)</label>
+          <select id="host" onchange="calc()">
+            <option value="0">No, tickets only</option>
+            <optgroup label="Marquee Host — $2,500 (incl. 4 tickets)">
+              <option value="2500">Serve &amp; Sparkle · Champagne</option>
+              <option value="2500">Top Shelf · The Bar</option>
+              <option value="2500">Strike a Pose · Décor &amp; Photobooth</option>
+              <option value="2500">The Munchie Lounge · Munchies &amp; late-night snacks</option>
+              <option disabled>Caviar Court · Caviar — SOLD OUT</option>
+              <option disabled>Ice Ice Baby · Ice Luge — SOLD OUT</option>
+            </optgroup>
+            <optgroup label="Host — $1,000 (incl. 2 tickets)">
+              <option value="1000">Aces of Bass · DJ</option>
+              <option value="1000">Spin Doctors · DJ</option>
+              <option value="1000">Havana Nights · Cigars</option>
+              <option value="1000">Neat Freaks · Scotch</option>
+              <option value="1000">Shot Callers · Shots</option>
+              <option value="1000">Cheese &amp; Thank You · Grazing Table (savory)</option>
+              <option value="1000">Sweet Spot · Dessert Table</option>
+              <option value="1000">Slice Slice Baby · Pizza</option>
+              <option value="1000">Pasta La Vista · Pasta</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+      <div class="total-line">
+        <span class="lbl">Your total</span>
+        <span class="amt" id="total">$500</span>
+      </div>
+      <div style="text-align:center;margin-top:26px"><button class="btn btn-gold" type="submit" style="width:100%">Complete My RSVP</button></div>
+      <p class="note">Champagne &amp; Caviar benefits the Altadena Town &amp; Country Club court-camera initiative. Contributions are not tax-deductible.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fl">🥂 Champagne &amp; Caviar</div>
+    <p>Saturday, September 19 · 6:30 PM · Home of Melinda &amp; Matt Nix</p>
+    <p style="margin-top:14px;opacity:.6;font-size:13px">A benefit for the Altadena Town &amp; Country Club</p>
+  </div>
+</footer>
+
+<script>
+  /* ================= STRIPE PAYMENT LINKS =================
+     Paste your three Stripe Payment Link URLs below. Create them in the Stripe
+     Dashboard → Payment Links (one per price). For the ticket link, turn ON
+     "Let customers adjust quantity" so guests can buy more than one.
+     Until these are filled in, the button shows a friendly setup reminder.        */
+  var STRIPE = {
+    ticket:   "https://buy.stripe.com/4gMaEX2sw47M55a7Mx9b000",   // $250 — general admission ticket
+    host1000: "https://buy.stripe.com/00wbJ10kocEidBG0k59b001",   // $1,000 — Host
+    host2500: "https://buy.stripe.com/eVqfZh7MQawafJ0aYJ9b002"    // $2,500 — Marquee Host
+  };
+  /* ======================================================== */
+
+  function calc(){
+    var t = parseInt(document.getElementById('tix').value)||0;
+    var h = parseInt(document.getElementById('host').value)||0;
+    var total = t*250 + h;
+    document.getElementById('total').textContent = '$'+total.toLocaleString();
+  }
+
+  function checkout(e){
+    e.preventDefault();
+    var h = parseInt(document.getElementById('host').value)||0;
+    var url = (h === 2500) ? STRIPE.host2500 : (h === 1000) ? STRIPE.host1000 : STRIPE.ticket;
+    if(!url || url.indexOf('REPLACE') > -1){
+      alert("Almost there — Stripe isn't connected yet.\n\nPaste your three Stripe Payment Link URLs into the STRIPE block near the bottom of this file, and this button will send guests to secure Stripe checkout.");
+      return;
+    }
+    window.location.href = url;
+  }
+  calc();
+</script>
+</body>
+</html>
