@@ -47,6 +47,10 @@
   .namelist .sep{color:var(--gold);opacity:.6}
   .namelist .g{color:var(--gold-soft);font-style:italic;font-family:'Jost',sans-serif;font-size:15px}
   .namelist .nm{white-space:nowrap}
+  .guestcols{column-count:3;column-gap:26px;max-width:660px;margin:0 auto}
+  .guestcols span{display:block;color:var(--cream);font-size:14.5px;line-height:1.85;text-align:center;break-inside:avoid}
+  .guestmore{text-align:center;color:var(--gold-soft);font-style:italic;font-size:14px;margin-top:14px}
+  @media(max-width:560px){.guestcols{column-count:2}}
   .tier-label{text-align:center;color:var(--gold-soft);font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin:0 0 14px}
   .hb-list{display:grid;grid-template-columns:1fr 1fr;gap:4px 30px}
   .hb{border-bottom:1px dotted var(--line);padding-bottom:5px}
@@ -121,7 +125,35 @@
   <!-- GUESTS -->
   <div class="section-label"><span class="eyebrow">And already coming</span><h2>Who's Coming</h2></div>
   <div class="card">
-    <p class="namelist"><span class="nm">Bob &amp; Beth Altman</span> <span class="sep">·</span> <span class="nm">Zarani Barrow &amp; Kelly Krulisky</span> <span class="sep">·</span> <span class="nm">Darryl &amp; Colleen Bates</span> <span class="sep">·</span> <span class="nm">Aaron &amp; Denise Buckwalter</span> <span class="sep">·</span> <span class="nm">Chris Burdette</span> <span class="sep">·</span> <span class="nm">Valiere Byrnes</span> <span class="sep">·</span> <span class="nm">Claire Dillavou</span> <span class="sep">·</span> <span class="nm">Linda Dunlea</span> <span class="sep">·</span> <span class="nm">Nate &amp; Luana Emge</span> <span class="sep">·</span> <span class="nm">Nick &amp; Nicole Fahey</span> <span class="sep">·</span> <span class="nm">Hudson Fega</span> <span class="sep">·</span> <span class="nm">Courtney &amp; Mike Hazlitt</span> <span class="sep">·</span> <span class="nm">Danny Jauregui</span> <span class="sep">·</span> <span class="nm">Cynthia &amp; Dan Jordan</span> <span class="sep">·</span> <span class="nm">Dashiell Manley &amp; Vanessa Bellafiore</span> <span class="sep">·</span> <span class="nm">Adrian &amp; Jean Metter</span> <span class="sep">·</span> <span class="nm">Alfred &amp; Robyn Navarro</span> <span class="sep">·</span> <span class="nm">Dave &amp; Ivana Nelson</span> <span class="sep">·</span> <span class="nm">Frances Olson</span> <span class="sep">·</span> <span class="nm">Alyssa Ross</span> <span class="sep">·</span> <span class="nm">Kate Sachs</span> <span class="sep">·</span> <span class="nm">Hilary &amp; Jeff Scofield</span> <span class="sep">·</span> <span class="nm">Aaron Simpson</span> <span class="sep">·</span> <span class="nm">Dave &amp; Kelly Szamet</span> <span class="sep">·</span> <span class="nm">Ian Wong</span> <span class="sep">·</span> <span class="nm">Jacqueline Zimmerman</span> <span class="g">…and more every day.</span></p>
+    <div class="guestcols">
+      <span>Bob &amp; Beth Altman</span>
+      <span>Zarani Barrow &amp; Kelly Krulisky</span>
+      <span>Darryl &amp; Colleen Bates</span>
+      <span>Aaron &amp; Denise Buckwalter</span>
+      <span>Chris Burdette</span>
+      <span>Valiere Byrnes</span>
+      <span>Claire Dillavou</span>
+      <span>Linda Dunlea</span>
+      <span>Nate &amp; Luana Emge</span>
+      <span>Nick &amp; Nicole Fahey</span>
+      <span>Hudson Fega</span>
+      <span>Courtney &amp; Mike Hazlitt</span>
+      <span>Danny Jauregui</span>
+      <span>Cynthia &amp; Dan Jordan</span>
+      <span>Dashiell Manley &amp; Vanessa Bellafiore</span>
+      <span>Adrian &amp; Jean Metter</span>
+      <span>Alfred &amp; Robyn Navarro</span>
+      <span>Dave &amp; Ivana Nelson</span>
+      <span>Frances Olson</span>
+      <span>Alyssa Ross</span>
+      <span>Kate Sachs</span>
+      <span>Hilary &amp; Jeff Scofield</span>
+      <span>Aaron Simpson</span>
+      <span>Dave &amp; Kelly Szamet</span>
+      <span>Ian Wong</span>
+      <span>Jacqueline Zimmerman</span>
+    </div>
+    <p class="guestmore">…and more every day.</p>
   </div>
 
 </div>
